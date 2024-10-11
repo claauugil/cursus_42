@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-09 13:04:04 by cgil              #+#    #+#             */
-/*   Updated: 2024-10-09 13:04:04 by cgil             ###   ########.fr       */
+/*   Created: 2024-10-11 11:05:45 by cgil              #+#    #+#             */
+/*   Updated: 2024-10-11 11:05:45 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <stdlib.h> //malloc y free
-#include <stdio.h> //provi
-#include <unistd.h> //write
-#include <stdarg.h> //var args
+int	ft_putstr(char *s)
+{
+	int	i;
 
-int	ft_printf(char const *, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_putnbr(int n);
-
-#endif
+	i = 0;
+	if (s)
+	{
+		while (s[i])
+		{
+			write(1, &s[i], 1);
+			i++;
+		}
+	}
+	else // si la cadena es nula
+	{
+		ft_putstr("(null)");
+		return (6);
+	}
+	return (i);
+}

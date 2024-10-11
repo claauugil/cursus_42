@@ -1,7 +1,10 @@
 #archivos fuente
-SRC = 
+SRC = ft_printf.c \
+	  ft_putchar.c \
+	  ft_putstr.c \
+	  ft_putnbr.c \
 
-NAME = libftprintf.a
+NAME = ft_printf.a
 
 OBJ = $(SRC:.c=.o)
 

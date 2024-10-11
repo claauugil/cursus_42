@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-09 13:04:04 by cgil              #+#    #+#             */
-/*   Updated: 2024-10-09 13:04:04 by cgil             ###   ########.fr       */
+/*   Created: 2024-10-11 12:20:23 by cgil              #+#    #+#             */
+/*   Updated: 2024-10-11 12:20:23 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <stdlib.h> //malloc y free
-#include <stdio.h> //provi
-#include <unistd.h> //write
-#include <stdarg.h> //var args
+int	ft_putnbr(int n)
+{
+	long	num;
+	int	len;
 
-int	ft_printf(char const *, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_putnbr(int n);
-
-#endif
+	num = n;
+	len = 0;
+	if (num < 0)
+	{
+		len += ft_putchar('-');
+		num = num * -1;
+	}
+	if (num >= 10)
+	{
+		len += ft_putnbr(num / 10);
+	}
+	len += ft_putchar(num % 10 + '0');
+	return (len);
+}
