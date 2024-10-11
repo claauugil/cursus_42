@@ -6,7 +6,7 @@
 /*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 10:38:02 by cgil              #+#    #+#             */
-/*   Updated: 2024/10/01 11:31:25 by cgil             ###   ########.fr       */
+/*   Updated: 2024/10/10 14:54:11 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*new_str;
-	size_t			len;
-	size_t			i;
+	char				*new_str;
+	unsigned int		len;
+	unsigned int		i;
 
-	i = 0;
-	len = ft_strlen(s);
 	if (!s || !f)
-		return (0);
+		return (NULL);
+	len = ft_strlen(s);
 	new_str = (char *)malloc((len + 1) * sizeof(char));
 	if (!new_str)
-		return (0);
+		return (NULL);
+	i = 0;
 	while (i < len)
 	{
 		new_str[i] = f(i, s[i]);

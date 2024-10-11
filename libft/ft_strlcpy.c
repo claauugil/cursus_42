@@ -6,7 +6,7 @@
 /*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 18:52:37 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/28 11:44:33 by cgil             ###   ########.fr       */
+/*   Updated: 2024/10/10 14:22:26 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	src_len;
 	size_t	i;
 
-	src_len = 0;
+	src_len = ft_strlen(src);
 	i = 0;
-	while (src[src_len] != '\0')
-	{
-		src_len++;
-	}
 	if (size > 0)
 	{
 		while (i < size -1 && src[i] != '\0')

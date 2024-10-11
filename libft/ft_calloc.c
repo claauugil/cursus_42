@@ -6,7 +6,7 @@
 /*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 11:10:08 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/25 17:18:45 by cgil             ###   ########.fr       */
+/*   Updated: 2024/10/07 11:55:43 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	total_size = nmemb * size;
 	ptr = malloc(total_size);
 	if (!ptr)
-		return (0);
+		return (NULL);
 	ft_bzero(ptr, total_size);
 	return (ptr);
 }

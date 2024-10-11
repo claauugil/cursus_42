@@ -6,7 +6,7 @@
 /*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:10:10 by cgil              #+#    #+#             */
-/*   Updated: 2024/10/03 15:15:52 by cgil             ###   ########.fr       */
+/*   Updated: 2024/10/09 11:59:20 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ static char	**fill_matrix(const char *s, char delimiter, char **matrix)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	words;
+	int		words;
 	char	**matrix;
 
 	words = word_counter(s, c);

@@ -6,7 +6,7 @@
 /*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:57:43 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/24 15:23:01 by cgil             ###   ########.fr       */
+/*   Updated: 2024/10/10 10:02:20 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*str;
-	size_t				i;
+	unsigned char	*str;
+	size_t			i;
 
 	str = (unsigned char *)s;
 	i = 0;

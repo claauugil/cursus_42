@@ -6,7 +6,7 @@
 /*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:29:06 by cgil              #+#    #+#             */
-/*   Updated: 2024/10/02 10:53:15 by cgil             ###   ########.fr       */
+/*   Updated: 2024/10/07 11:27:18 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-	if (d == NULL && s == NULL)
+	if (!d && !s)
 		return (NULL);
 	if (d > s)
 	{
