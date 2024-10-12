@@ -14,7 +14,7 @@
 
 int	ft_putptr(void *ptr)
 {
-	int	len;
+	int					len;
 	unsigned long long	ad;
 
 	len = 0;

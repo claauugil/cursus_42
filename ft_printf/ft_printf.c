@@ -14,7 +14,8 @@
 //procesa un unico caracter (tipo de formato actual)
 static int	format_manager(const char format, va_list args)
 {
-	int	len; //caracteres impresos
+	int	len;
+
 	len = 0;
 	if (format == 'c')
 		len += ft_putchar(va_arg(args, int));
@@ -61,10 +62,11 @@ int	ft_printf(char const *str, ...)
 }
 
 /*int main() {
-    char *str = "Hola, mundo!";
+    char *str = "NULL";
     int number = 42;
     unsigned int unsigned_number = -12345;
 	int *ptr = &number;
+	int *ptr2 = NULL;
 
     // Uso de ft_printf
     ft_printf("Prueba de ft_printf:\n");
@@ -76,6 +78,7 @@ int	ft_printf(char const *str, ...)
 	ft_printf("Hexadecimal minuscula %x\n", 59);
 	ft_printf("Hexadecimal mayuscula %X\n", 78);
 	ft_printf("Puntero %p\n", ptr );
+	ft_printf("Puntero %p\n",ptr2 );
 
     // Uso de printf para comparación
     printf("\nPrueba de printf:\n");
@@ -86,7 +89,7 @@ int	ft_printf(char const *str, ...)
     printf("Porcentaje: %%\n");
 	printf("Hexadecimal minuscula %x\n", 59);
 	printf("Hexadecimal mayuscula %X\n", 78 );
-	printf("Puntero %p\n", ptr );
+	printf("Puntero %p\n",ptr2 );
 
     return 0;
 }*/

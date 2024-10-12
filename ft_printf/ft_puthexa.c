@@ -14,7 +14,7 @@
 
 int	ft_puthexa(unsigned long long num, int cap)
 {
-	int	len;
+	int		len;
 	char	low;
 	char	up;
 
@@ -24,7 +24,7 @@ int	ft_puthexa(unsigned long long num, int cap)
 	if (num >= 16)
 		len += ft_puthexa(num / 16, cap);
 	if (!cap) // si cap es cero (t)
-		len +=ft_putchar(low);
+		len += ft_putchar(low);
 	else //cap (f)
 		len += ft_putchar(up);
 	return (len);
