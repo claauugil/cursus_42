@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-09 13:04:04 by cgil              #+#    #+#             */
-/*   Updated: 2024-10-09 13:04:04 by cgil             ###   ########.fr       */
+/*   Created: 2024-10-12 10:12:12 by cgil              #+#    #+#             */
+/*   Updated: 2024-10-12 10:12:12 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
-# include <stdarg.h>
+int	ft_putnbr_unsigned(unsigned int n)
+{
+	int	len;
 
-int	ft_printf(char const *str, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_putnbr(int n);
-int	ft_putnbr_unsigned(unsigned int n);
-int	ft_puthexa(unsigned long long num, int cap);
-int	ft_putptr(void *ptr);
-
-#endif
+	len = 0;
+	if (n >= 10)
+		len += ft_putnbr_unsigned(n / 10);
+	len += ft_putchar((n % 10 + '0')); //paso char cuando no es mayor a 10, el modulo sigue siendo el numero
+	return (len);
+}

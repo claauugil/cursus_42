@@ -3,8 +3,11 @@ SRC = ft_printf.c \
 	  ft_putchar.c \
 	  ft_putstr.c \
 	  ft_putnbr.c \
+	  ft_putnbr_unsigned.c \
+	  ft_puthexa.c \
+	  ft_putptr.c \
 
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 OBJ = $(SRC:.c=.o)
 

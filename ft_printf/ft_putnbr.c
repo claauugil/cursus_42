@@ -15,7 +15,7 @@
 int	ft_putnbr(int n)
 {
 	long	num;
-	int	len;
+	int		len;
 
 	num = n;
 	len = 0;
@@ -27,7 +27,11 @@ int	ft_putnbr(int n)
 	if (num >= 10)
 	{
 		len += ft_putnbr(num / 10);
+		len += ft_putnbr(num % 10);
 	}
-	len += ft_putchar(num % 10 + '0');
+	else
+	{
+		len += ft_putchar(num % 10 + '0');
+	}
 	return (len);
 }

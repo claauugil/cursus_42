@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-09 13:04:04 by cgil              #+#    #+#             */
-/*   Updated: 2024-10-09 13:04:04 by cgil             ###   ########.fr       */
+/*   Created: 2024-10-12 16:24:06 by cgil              #+#    #+#             */
+/*   Updated: 2024-10-12 16:24:06 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
-# include <stdarg.h>
+int	ft_putptr(void *ptr)
+{
+	int	len;
+	unsigned long long	ad;
 
-int	ft_printf(char const *str, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_putnbr(int n);
-int	ft_putnbr_unsigned(unsigned int n);
-int	ft_puthexa(unsigned long long num, int cap);
-int	ft_putptr(void *ptr);
-
-#endif
+	len = 0;
+	ad = (unsigned long long )ptr;
+	if (!ptr) // si el puntero es nulo
+	{
+		len += ft_putstr("(nil)");
+		return (len);
+	}
+	len += ft_putstr("0x"); //inicio estandar de direcciones de memoria
+	len += ft_puthexa(ad, 0);
+	return (len);
+}
