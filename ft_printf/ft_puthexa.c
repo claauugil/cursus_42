@@ -19,13 +19,17 @@ int	ft_puthexa(unsigned long long num, int cap)
 	char	up;
 
 	len = 0;
-	low = "0123456789abcdef"[num % 16];
-	up = "0123456789ABCDEF"[num % 16];
 	if (num >= 16)
 		len += ft_puthexa(num / 16, cap);
-	if (!cap) // si cap es cero (t)
-		len += ft_putchar(low);
-	else //cap (f)
+	if (cap)
+	{
+		up = "0123456789ABCDEF"[num % 16];
 		len += ft_putchar(up);
+	}
+	else
+	{
+		low = "0123456789abcdef"[num % 16];
+		len += ft_putchar(low);
+	}
 	return (len);
 }

@@ -19,6 +19,6 @@ int	ft_putnbr_unsigned(unsigned int n)
 	len = 0;
 	if (n >= 10)
 		len += ft_putnbr_unsigned(n / 10);
-	len += ft_putchar((n % 10 + '0')); //paso char cuando no es mayor a 10, el modulo sigue siendo el numero
+	len += ft_putchar((n % 10 + '0'));
 	return (len);
 }

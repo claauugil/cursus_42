@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-//procesa un unico caracter (tipo de formato actual)
+
 static int	format_manager(const char format, va_list args)
 {
 	int	len;
@@ -28,9 +28,9 @@ static int	format_manager(const char format, va_list args)
 	else if (format == '%')
 		len += ft_putchar('%');
 	else if (format == 'x')
-		len += ft_puthexa(va_arg(args, unsigned int), 0); //0 = low
+		len += ft_puthexa(va_arg(args, unsigned int), 0);
 	else if (format == 'X')
-		len += ft_puthexa(va_arg(args, unsigned int), 1); //1 = up
+		len += ft_puthexa(va_arg(args, unsigned int), 1);
 	else if (format == 'p')
 		len += ft_putptr(va_arg(args, void *));
 	return (len);
@@ -47,24 +47,23 @@ int	ft_printf(char const *str, ...)
 	va_start(args, str);
 	while (str[i] != '\0')
 	{
-		if (str[i] != '%') //si no tiene ningun especificador
+		if (str[i] != '%')
 			len += ft_putchar(str[i]);
-		else // si es %
+		else
 		{
-			i++; // para ver el siguiente caracter (ef)
+			i++;
 			if (str[i] != '\0')
-				len += format_manager(str[i], args); //si son especificadores
+				len += format_manager(str[i], args);
 		}
 		i++;
 	}
 	va_end(args);
 	return (len);
 }
-
 /*int main() {
-    char *str = "NULL";
+    char *str;
     int number = 42;
-    unsigned int unsigned_number = -12345;
+    unsigned int unsigned_number = 12345;
 	int *ptr = &number;
 	int *ptr2 = NULL;
 
@@ -77,7 +76,8 @@ int	ft_printf(char const *str, ...)
     ft_printf("Porcentaje: %%\n");
 	ft_printf("Hexadecimal minuscula %x\n", 59);
 	ft_printf("Hexadecimal mayuscula %X\n", 78);
-	ft_printf("Puntero %p\n", ptr );
+	ft_printf("%X\n", -78);
+	ft_printf("%p\n", ptr );
 	ft_printf("Puntero %p\n",ptr2 );
 
     // Uso de printf para comparación
@@ -89,6 +89,7 @@ int	ft_printf(char const *str, ...)
     printf("Porcentaje: %%\n");
 	printf("Hexadecimal minuscula %x\n", 59);
 	printf("Hexadecimal mayuscula %X\n", 78 );
+	printf("%X\n", -78);
 	printf("Puntero %p\n",ptr2 );
 
     return 0;

@@ -18,13 +18,13 @@ int	ft_putptr(void *ptr)
 	unsigned long long	ad;
 
 	len = 0;
-	ad = (unsigned long long )ptr;
-	if (!ptr) // si el puntero es nulo
+	ad = (unsigned long long)ptr;
+	if (!ptr)
 	{
 		len += ft_putstr("(nil)");
 		return (len);
 	}
-	len += ft_putstr("0x"); //inicio estandar de direcciones de memoria
+	len += ft_putstr("0x");
 	len += ft_puthexa(ad, 0);
 	return (len);
 }

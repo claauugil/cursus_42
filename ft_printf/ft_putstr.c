@@ -25,7 +25,7 @@ int	ft_putstr(char *s)
 			i++;
 		}
 	}
-	else // si la cadena es nula
+	else
 	{
 		write(1, "(null)", 6);
 		return (6);
