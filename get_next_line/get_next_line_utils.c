@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen(char *str)
 {
 	size_t	longitud;
 
@@ -24,7 +24,7 @@ size_t	ft_strlen(const char *str)
 	return (longitud);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(char *s, int c)
 {
 	unsigned char	ch;
 
@@ -43,7 +43,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	size_t	src_len;
 	size_t	i;
@@ -61,7 +61,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (src_len);
 }
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*strjoined;
 	size_t	len1;
@@ -78,7 +78,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcpy(strjoined + len1, s2, len2 + 1);
 	return (strjoined);
 }
-char	*ft_strdup(const char *s)
+char	*ft_strdup(char *s)
 {
 	char	*copy;
 	int 	i;

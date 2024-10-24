@@ -11,37 +11,61 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-/*#include <stdio.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>*/
 
 char	*get_next_line(int fd)
 {
-	static char	*store = NULL;
-	char		*buffer;
-	int			bytes_read;
+	char	*store;
+	char	*buffer;
 
-	if (fd <= 0 | BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	buffer = (char *)malloc((BUFFER_SIZE + 1) *sizeof (char));
+	if (!buffer)
+		return (NULL);
+}
+
+/*char	*get_next_line(int fd)
+{
+	static char	*store = NULL; // guardar la linea leida por buffer
+	char		*buffer; // guarda temporalmente la linea leida (no se puede guardar direcctamente en store)
+	int			bytes_read;  //cantidad de datos leidos
+	char		*temp;
+	char		*line;
+
+	if (fd < 0 || BUFFER_SIZE <= 0) //problema al leer
 		return (NULL);
 	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof (char));
 	if (!buffer)
 		return (NULL);
-	bytes_read = read(fd, buffer,BUFFER_SIZE);
-	//while (bytes_read > 0)
+	while ((bytes_read = read(fd, buffer,BUFFER_SIZE)) > 0)
+	{
+		buffer[bytes_read] = '\0';
+		if (store == NULL) //termino de leer
+			store = ft_strdup(buffer); //guardo en store la primera linea leida
+		else
+		{
+			temp = ft_strjoin(store, buffer);
+			free(store);
+			store = temp;
+		}
+		if (ft_strchr(store, '\n'))
+			break;
+	}
+	free (buffer);
 	if (bytes_read < 0)
+		return (NULL);
+	if (store == NULL || *store == '\0')
 	{
-		free(buffer);
+		free(store);
+		store = NULL;
 		return (NULL);
 	}
-	if (bytes_read == 0)
-	{
-		free(buffer);
-		return (NULL);
-	}
-	buffer[bytes_read] = '\0'; //cerrar en nulo
-	return (buffer);
+	line = extract_line(store);
+	store = rest_of_line(store);
+	return (line);
 }
+char	*extract_line(char *store)
+char 	*rest_of_line();
 int main (void)
 {
 	int fd = open ("hola.txt", O_RDONLY);
@@ -59,4 +83,4 @@ int main (void)
 	}
 	close (fd);
 	return (0);
-}
+}*/
