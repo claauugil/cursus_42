@@ -12,75 +12,100 @@
 
 #include "get_next_line.h"
 
-char	*get_next_line(int fd)
+char	*concat_line(char **store, char *buffer) //**
 {
-	char	*store;
-	char	*buffer;
+	char	*temp;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (NULL);
-	buffer = (char *)malloc((BUFFER_SIZE + 1) *sizeof (char));
-	if (!buffer)
-		return (NULL);
+	temp = ft_strjoin(*store, buffer);
+	free (*store);
+	return (temp);
 }
 
-/*char	*get_next_line(int fd)
+int	handle_errors(char **store, char *buffer, size_t bytes_read)
 {
-	static char	*store = NULL; // guardar la linea leida por buffer
-	char		*buffer; // guarda temporalmente la linea leida (no se puede guardar direcctamente en store)
-	int			bytes_read;  //cantidad de datos leidos
-	char		*temp;
-	char		*line;
+	if (bytes_read < 0 || (bytes_read == 0
+			&& (*store == NULL || **store == '\0')))
+	{
+		free(buffer);
+		free(*store);
+		*store = NULL;
+		return (1);
+	}
+	return (0);
+}
 
-	if (fd < 0 || BUFFER_SIZE <= 0) //problema al leer
+char	*tidy_lines(char **store)
+{
+	char	*new_line; //puntero a la direcion del primer caracter de la nueva linea
+	size_t	line_len; //longitud de la linea a extraer mas el caracter nulo
+	char	*line; //linea devuelta
+	char	*new_store; //el resto de store si lo hay, sino NULL
+
+	new_line = (ft_strchr(*store, '\n')); // si encuentra un salto de linea
+	if (new_line)
+		line_len = (new_line - *store) + 1;
+	else
+		line_len = ft_strlen(*store);
+	line = (char *)malloc (line_len + 1); // + 1 para incluir el nulo
+	ft_strlcpy(line, *store, line_len + 1); // para el nulo
+	if (new_line)
+	{
+		new_store = ft_strdup(new_line + 1); // guardar lo que haya quedado (si lo hay)
+		free(*store);
+		*store = new_store;
+	}
+	else
+	{
+		free(*store);
+		*store = NULL;
+	}
+	return (line);
+}
+
+char	*get_next_line(int fd)
+{
+	static char	*store;
+	char		*buffer;
+	size_t		bytes_read;
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof (char));
 	if (!buffer)
 		return (NULL);
-	while ((bytes_read = read(fd, buffer,BUFFER_SIZE)) > 0)
+	bytes_read = read(fd, buffer, BUFFER_SIZE);
+	while (bytes_read > 0)
 	{
-		buffer[bytes_read] = '\0';
-		if (store == NULL) //termino de leer
-			store = ft_strdup(buffer); //guardo en store la primera linea leida
+		buffer[bytes_read] = '\0'; //tratar buffer como cadena valida
+		if (store == NULL) // para la primera lectura
+			store = ft_strdup(buffer);
 		else
-		{
-			temp = ft_strjoin(store, buffer);
-			free(store);
-			store = temp;
-		}
+			store = concat_line(&store, buffer); //concatenar cuando store ya no este vacio
 		if (ft_strchr(store, '\n'))
-			break;
+			break;// si encuentra un salto de linea sale
+		bytes_read = read(fd, buffer, BUFFER_SIZE); // vuelve a leer si no entra en las concidiones
 	}
-	free (buffer);
-	if (bytes_read < 0)
+	if (handle_errors(&store, buffer, bytes_read))
 		return (NULL);
-	if (store == NULL || *store == '\0')
-	{
-		free(store);
-		store = NULL;
-		return (NULL);
-	}
-	line = extract_line(store);
-	store = rest_of_line(store);
-	return (line);
+	free(buffer);
+	return (tidy_lines(&store)); //puntero para poder modificar store directamente
 }
-char	*extract_line(char *store)
-char 	*rest_of_line();
-int main (void)
+/*int main (void)
 {
-	int fd = open ("hola.txt", O_RDONLY);
+	int fd;
+	char *line;
+
+	fd = open ("hola.txt", O_RDONLY);
 	if (fd == -1)
 	{
-		printf("Error al leer el archivo");
-		return 1;
+		printf("Error en la lectura");
+		return (1);
 	}
-
-	char *line = get_next_line(fd);
-	if (line)
+	while ((line = get_next_line(fd)) != NULL)
 	{
-		printf("Leido: %s\n", line);
+		printf("%s", line);
 		free(line);
 	}
-	close (fd);
+	close(fd);
 	return (0);
 }*/
