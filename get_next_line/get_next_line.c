@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-char	*concat_line(char **store, char *buffer) //**
+char	*concat_line(char **store, char *buffer)
 {
 	char	*temp;
 
@@ -79,7 +79,7 @@ char	*get_next_line(int fd)
 		buffer[bytes_read] = '\0'; //tratar buffer como cadena valida
 		if (store == NULL) // para la primera lectura
 			store = ft_strdup(buffer);
-		else
+		else // se comcatena ya que store ya tiene una linea completa
 			store = concat_line(&store, buffer); //concatenar cuando store ya no este vacio
 		if (ft_strchr(store, '\n'))
 			break;// si encuentra un salto de linea sale
