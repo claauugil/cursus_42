@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-23 09:02:46 by cgil              #+#    #+#             */
-/*   Updated: 2024-10-23 09:02:46 by cgil             ###   ########.fr       */
+/*   Created: 2024-10-29 13:21:40 by cgil              #+#    #+#             */
+/*   Updated: 2024-10-29 13:21:40 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*concat_line(char **store, char *buffer)
 {
 	char	*temp;
 
 	temp = ft_strjoin(*store, buffer);
-	free (*store);
+	free(*store);
 	return (temp);
 }
 
 int	handle_errors(char **store, char *buffer, ssize_t bytes_read)
 {
 	if (bytes_read < 0 || (bytes_read == 0
-			&& (*store == NULL || **store == 0)))
+			&& (*store == NULL || **store == '\0')))
 	{
-		free(buffer);
-		free(*store);
+		free (buffer);
+		free (*store);
 		*store = NULL;
 		return (1);
 	}
@@ -43,10 +43,10 @@ char	*tidy_lines(char **store)
 
 	new_line = ft_strchr(*store, '\n');
 	if (new_line)
-		line_len = (new_line - *store) + 1;
+		line_len = (new_line - *store + 1);
 	else
 		line_len = ft_strlen(*store);
-	line = (char *)malloc (line_len + 1);
+	line = (char *)malloc(line_len + 1);
 	ft_strlcpy(line, *store, line_len + 1);
 	if (new_line)
 	{
@@ -64,49 +64,61 @@ char	*tidy_lines(char **store)
 
 char	*get_next_line(int fd)
 {
-	static char	*store = NULL;
+	static char	*store[1024];
 	char		*buffer;
 	ssize_t		bytes_read;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof (char));
+	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
 		return (NULL);
 	bytes_read = read(fd, buffer, BUFFER_SIZE);
 	while (bytes_read > 0)
 	{
 		buffer[bytes_read] = '\0';
-		if (store == NULL)
-			store = ft_strdup(buffer);
+		if (store[fd] == NULL)
+			store[fd] = ft_strdup(buffer);
 		else
-			store = concat_line(&store, buffer);
-		if (ft_strchr(store, '\n'))
+			store[fd] = concat_line(&store[fd], buffer);
+		if (ft_strchr(store[fd], '\n'))
 			break ;
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 	}
-	if (handle_errors(&store, buffer, bytes_read))
+	if (handle_errors(&store[fd], buffer, bytes_read))
 		return (NULL);
-	free(buffer);
-	return (tidy_lines(&store));
+	free (buffer);
+	return (tidy_lines(&store[fd]));
 }
-/*#include <stdio.h>
+#include <stdio.h>
 
-int main (void)
+/*int main (int argc, char **argv)
 {
 	int fd;
 	char *line;
+	int i = 1;
 
-	fd = open("hola.txt", O_RDONLY);
-	if (fd < 0)
+	if (argc < 2)
 	{
-		printf("Error al abrir el archivo");
+		printf("No hay suficientes argumentos");
+		return (1);
 	}
-	while ((line = get_next_line(fd)) != NULL)
+	while (i < argc)
 	{
-		printf("%s", line);
-		free(line);
+		fd = open(argv[i], O_RDONLY);
+		if (fd < 0)
+		{
+			printf("Error al leer el descriptor");
+			continue;
+		}
+		printf("Lee %s\n", argv[i]);
+		while ((line = get_next_line(fd)) != NULL)
+		{
+			printf("%s\n", line);
+			free(line);
+		}
+		close(fd);
+		printf("\n");
+		i++;
 	}
-	close(fd);
-	return (0);
 }*/
