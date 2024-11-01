@@ -90,6 +90,22 @@ char	*get_next_line(int fd)
 	free(buffer);
 	return (tidy_lines(&store));
 }
+#include <stdio.h>
+
+int main(void)
+{
+	int fd;
+	char *line;
+
+	fd = open("hola.txt", O_RDONLY);
+	while ((line = get_next_line(fd))!= NULL)
+	{
+		printf("%s", line);
+		free(line);
+	}
+	close(fd);
+	return (0);
+}
 /*#include <stdio.h>
 
 int main (void)
@@ -97,7 +113,7 @@ int main (void)
 	int fd;
 	char *line;
 
-	fd = open("hola.txt", O_RDONLY);
+	fd = open("chao.txt", O_RDONLY);
 	if (fd < 0)
 	{
 		printf("Error al abrir el archivo");

@@ -92,7 +92,39 @@ char	*get_next_line(int fd)
 }
 #include <stdio.h>
 
-/*int main (int argc, char **argv)
+int main (int argc, char *argv[])
+{
+	int 	fd;
+	char	*line;
+	int		i;
+
+	i = 1;
+
+	if(argc < 2)
+	{
+		printf("No hay suficientes argumentos");
+		return (1);
+	}
+	while (i < argc)
+	{
+		fd = open(argv[i], O_RDONLY);
+		if (fd < 0)
+		{
+			printf("Error al leer el archivo");
+			continue;
+		}
+		printf("Lee: %s\n", argv[i]);
+		while ((line = get_next_line(fd))!= NULL)
+		{
+			printf("%s", line);
+			free(line);
+		}
+		close (fd);
+		printf("\n");
+		i++;
+	}
+}
+int main (int argc, char **argv)
 {
 	int fd;
 	char *line;
@@ -121,4 +153,35 @@ char	*get_next_line(int fd)
 		printf("\n");
 		i++;
 	}
-}*/
+}
+
+#include <stdio.h>
+int main (int argc, char **argv)
+{
+	int fd;
+	char *line;
+	int i = 1;
+	if (argc < 2)
+	{
+		printf("No hay suficientes argumentos");
+		return (1);
+	}
+	while (i < argc)
+	{
+		fd = open(argv[i], O_RDONLY);
+		if (fd < 0)
+		{
+			printf("Error");
+			continue;
+		}
+		printf("Lee %s:\n", argv[i]);
+		while((line = get_next_line(fd))!= NULL)
+		{
+			printf("%s", line);
+			free(line);
+		}
+		close(fd);
+		printf("\n");
+		i++;
+	}
+}
