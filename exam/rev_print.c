@@ -7,10 +7,10 @@ char	*rev_print(char *str)
 
 	while (str[len])
 		len++;
-	while (str[len] >= 0)
+	while (len >= 0)
 	{
-		write(1, &str[len], 1);
 		len--;
+		write(1, &str[len], 1);
 	}
 	write(1, "\n", 1);
 	return(str);
