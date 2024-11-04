@@ -10,9 +10,10 @@ void putnbr(int num)
 	if (num >= 10)
 	{
 		putnbr(num / 10);
-		//putnbr(num % 10);
+		putnbr(num % 10);
 	}
-	ft_putchar((num % 10) + '0');
+	else
+		ft_putchar(num + 48);
 }
 /*void write_num(int num)
 {
