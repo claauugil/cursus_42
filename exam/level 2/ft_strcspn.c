@@ -18,4 +18,5 @@ size_t ft_strcsnp(const char  *s, const char *reject)
 	}
 	return (len);
 }
-//la funcion devuelve a longitud de la cadena s mientras no contenga caracteres de reject
+//la funcion devuelve a longitud de la cadena s 
+//mientras no contenga caracteres de reject
