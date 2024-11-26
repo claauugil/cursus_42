@@ -20,5 +20,6 @@
 # include <sys/types.h>
 
 int main (int ac, char *av[], char **env);
+void prep_pipe(int in_file, int out_file);
 
 #endif
