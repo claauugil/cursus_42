@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-11-26 09:01:22 by cgil              #+#    #+#             */
-/*   Updated: 2024-11-26 09:01:22 by cgil             ###   ########.fr       */
+/*   Created: 2024/09/17 18:00:21 by cgil              #+#    #+#             */
+/*   Updated: 2024/09/24 15:29:09 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
+#include "libft.h"
 
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <sys/wait.h>
-# include <sys/types.h>
+size_t	ft_strlen(const char *str)
+{
+	size_t	longitud;
 
-int main (int ac, char *av[], char **env);
-
-#endif
+	longitud = 0;
+	while (str[longitud] != '\0')
+	{
+		longitud++;
+	}
+	return (longitud);
+}

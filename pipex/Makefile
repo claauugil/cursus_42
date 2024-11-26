@@ -1,25 +1,24 @@
-SRC =
+SRC = pipex.c \
+	  pipex_utils.c
 
-NAME = pipex.a
+NAME = pipex
 
 OBJ = $(SRC: .c= .o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-AR = ar
-ARFLAGS = rcs
-
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-		$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	cd libft && $(MAKE);
+	$(CC) $(CFLAGS) $(OBJ) -L ./libft -lft-o $(NAME)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
 clean:
+	cd libft && $(MAKE) clean
 	rm -f $(OBJ)
 fclean: clean
+	cd libft && $(MAKE) fclean
 	rm -f $(NAME)
 re: fclean all
 

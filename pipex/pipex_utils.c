@@ -1,24 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.h                                            :+:      :+:    :+:   */
+/*   pipex_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-11-26 09:01:22 by cgil              #+#    #+#             */
-/*   Updated: 2024-11-26 09:01:22 by cgil             ###   ########.fr       */
+/*   Created: 2024-11-26 08:59:48 by cgil              #+#    #+#             */
+/*   Updated: 2024-11-26 08:59:48 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
-
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <sys/wait.h>
-# include <sys/types.h>
-
-int main (int ac, char *av[], char **env);
-
-#endif
