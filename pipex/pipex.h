@@ -19,7 +19,10 @@
 # include <sys/wait.h>
 # include <sys/types.h>
 
-int main (int ac, char *av[], char **env);
 void prep_pipe(int in_file, int out_file);
+void handle_fork_error(void);
+void close_fds(int fd1, int fd2, int fd3, int fd4);
+void handle_first_child(int in_file, int *pipe_fds, char *av[1], char *env[]);
+void handle_second_child(int out_file, int *pipe_fds, char *av[1], char *env[]);
 
 #endif
