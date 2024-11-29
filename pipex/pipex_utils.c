@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "pipex.h"
+#include "libft.h"
 
 void prep_pipe(int in_file, int out_file)
 {
@@ -18,6 +19,21 @@ void prep_pipe(int in_file, int out_file)
 	dup2(out_file, STDOUT_FILENO);
 }
 
+char** get_path(char **env)
+{
+	char **path;
+
+	while(*env)
+	{
+		if(ft_strncmp(*env, "PATH", 4) == 0)
+			break;
+		*env++;
+	}
+	if (*env == NULL)
+		return (NULL);
+	path = ft_split(*env + 5, ':');
+	return(path);
+}
 //cierra todos los descriptores, porque ya estan duplicados
 void close_fds(int fd1, int fd2, int fd3, int fd4)
 {
