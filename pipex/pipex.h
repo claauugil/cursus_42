@@ -18,11 +18,15 @@
 # include <stdlib.h>//mallloc
 # include <sys/wait.h> // wait
 # include <sys/types.h>// pid_t, fork
+# include <stdio.h>
 
 void prep_pipe(int in_file, int out_file);
 void fork_error(void);
 void close_fds(int fd1, int fd2, int fd3, int fd4);
 void handle_first_child(int in_file, int *pipe_fds, char *env[], char *bin);
 void handle_second_child(int out_file, int *pipe_fds, char *env[], char *bin);
+char** get_path(char **env);
+void exec(char *cmd, char *env[]);
+char *get_exec(char *cmd, char **paths);
 
 #endif

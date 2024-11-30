@@ -1,9 +1,9 @@
 SRC = pipex.c \
-	  pipex_utils.c
+	  pipex_utils.c \
 
 NAME = pipex
 
-OBJ = $(SRC: .c= .o)
+OBJ = $(SRC:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -12,7 +12,7 @@ all: $(NAME)
 
 $(NAME) : $(OBJ)
 	cd libft && $(MAKE);
-	$(CC) $(CFLAGS) $(OBJ) -L ./libft -lft-o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -L ./libft -lft -o $(NAME)
 
 clean:
 	cd libft && $(MAKE) clean
@@ -22,3 +22,4 @@ fclean: clean
 	rm -f $(NAME)
 re: fclean all
 
+.PHONY: clean fclean all re
