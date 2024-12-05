@@ -1,5 +1,17 @@
 SRC = pipex.c \
 	  pipex_utils.c \
+	  ft_bzero.c \
+	  ft_split.c \
+	  ft_strdup.c \
+	  ft_strjoin.c \
+	  ft_calloc.c \
+	  ft_strlcpy.c \
+	  ft_strlen.c \
+	  ft_substr.c \
+	  ft_strncmp.c \
+	  ft_putstr.c \
+	  ft_errors.c\
+
 
 NAME = pipex
 
@@ -11,14 +23,11 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	cd libft && $(MAKE);
-	$(CC) $(CFLAGS) $(OBJ) -L ./libft -lft -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	cd libft && $(MAKE) clean
 	rm -f $(OBJ)
 fclean: clean
-	cd libft && $(MAKE) fclean
 	rm -f $(NAME)
 re: fclean all
 

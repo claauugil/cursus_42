@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 12:55:25 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/24 15:18:08 by cgil             ###   ########.fr       */
+/*   Created: 2024/12/04 16:14:03 by cgil              #+#    #+#             */
+/*   Updated: 2024/12/04 16:14:06 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "pipex.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putstr(char *s)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	int	i;
 
-	ptr = (unsigned char *)s;
 	i = 0;
-	while (i < n)
+	while (s[i] != '\0')
 	{
-		ptr[i] = 0;
+		write(1, &s[i], 1);
 		i++;
 	}
 }

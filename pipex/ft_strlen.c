@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 18:45:23 by cgil              #+#    #+#             */
-/*   Updated: 2024/10/09 13:44:29 by cgil             ###   ########.fr       */
+/*   Created: 2024/09/17 18:00:21 by cgil              #+#    #+#             */
+/*   Updated: 2024/09/24 15:29:09 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "pipex.h"
 
-static char	*ft_strcp(char *dest, char *src)
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	longitud;
 
-	i = 0;
-	while (src[i] != '\0')
+	longitud = 0;
+	while (str[longitud] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		longitud++;
 	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-char	*ft_strdup(const char *s)
-{
-	char	*copy;
-	char	*src;
-
-	src = (char *)s;
-	copy = malloc(ft_strlen(src) + 1);
-	if (!copy)
-		return (NULL);
-	if (copy != NULL)
-		return (ft_strcp(copy, src));
-	return (copy);
+	return (longitud);
 }

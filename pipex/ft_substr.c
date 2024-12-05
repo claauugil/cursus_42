@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 16:01:38 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/27 15:36:21 by cgil             ###   ########.fr       */
+/*   Created: 2024/09/26 09:59:06 by cgil              #+#    #+#             */
+/*   Updated: 2024/10/04 12:02:40 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "pipex.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*strjoined;
-	size_t	len1;
-	size_t	len2;
+	char	*substr;
+	size_t	len_s;
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	if (!s1 || !s2)
+	if (!s)
 		return (NULL);
-	strjoined = (char *)malloc(len1 + len2 + 1);
-	if (!strjoined)
+	len_s = ft_strlen(s);
+	if (start >= len_s)
+	{
+		substr = (char *)malloc(1);
+		if (!substr)
+			return (NULL);
+		substr[0] = '\0';
+		return (substr);
+	}
+	if (len > len_s - start)
+		len = len_s - start;
+	substr = (char *)malloc(len + 1);
+	if (!substr)
 		return (NULL);
-	ft_strlcpy(strjoined, s1, len1 + 1);
-	ft_strlcpy(strjoined + len1, s2, len2 + 1);
-	return (strjoined);
+	ft_strlcpy(substr, s + start, len + 1);
+	return (substr);
 }
