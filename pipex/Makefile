@@ -10,7 +10,7 @@ SRC = pipex.c \
 	  ft_substr.c \
 	  ft_strncmp.c \
 	  ft_putstr.c \
-	  ft_errors.c\
+	  errors.c\
 
 
 NAME = pipex
