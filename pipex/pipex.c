@@ -39,7 +39,7 @@ int	main(int ac, char *av[], char *env[])
 	pid_t	pid2;
 
 	if (ac != 5)
-		print_error(av[1]);
+		return(write(2,"run the program as: $> < infile cmd1 | cmd2 > outfile\n", 55), 1);
 	pipe(pipe_fds);
 	fin_fd = open(av[1], O_RDONLY);
 	if (fin_fd < 0)

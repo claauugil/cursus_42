@@ -24,12 +24,12 @@ void	print_error(char *av)
 	{
 		if (access(av, R_OK) != 0)
 		{
-			ft_putstr("zsh: permision denied: ");
+			ft_putstr("zsh: permission denied: ");
 			ft_putstr(av);
 			exit(EXIT_FAILURE);
 		}
 	}
-	ft_putstr("zsh: no such file or directory: ");
+	ft_putstr("Error while opening : ");
 	ft_putstr(av);
 	exit(EXIT_FAILURE);
 }
