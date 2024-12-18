@@ -12,10 +12,10 @@
 
 #include "push_swap.h"
 
-int main(int ac, char *av[])
+int	main(int ac, char *av[])
 {
-	t_stack *stack_a; //puntero a una pila, no la pila
-	t_stack *stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 	if (scan_error(ac, av))
 		print_error();
@@ -24,7 +24,7 @@ int main(int ac, char *av[])
 	if (!stack_a || !stack_b) // si la funcion devuelve NULL
 		print_error();
 	process_init_stack(ac, av, stack_a);
-	if (if_dups(stack_a)) // duplicados
+	if (search_dups(stack_a)) // si la funcion devuelve 1
 		print_error();
 	if (!is_sorted(stack_a))
 		sort(stack_a, stack_b);
@@ -32,9 +32,10 @@ int main(int ac, char *av[])
 	free_stack(stack_b);
 	return (0);
 }
+
 int	scan_error(int ac, char *av[])
 {
-	int i;
+	int	i;
 
 	i = 1;
 	if (ac > 1 && empty_string(av[1])) // si la string esta vacia
@@ -43,17 +44,17 @@ int	scan_error(int ac, char *av[])
 		return (1);
 	while (i < ac)
 	{
-		if (!fits_range(av[i])) // si no esta en el rango de los ints
-			return(1);
+		if (!int_range(av[i])) // si devuelve 0
+			return (1);
 		i++;
 	}
 	if (!validate_input(ac, av)) // si retorna 0
 		return (1);
 	return (0);
 }
-void print_error(void)
+
+void	print_error(void)
 {
 	write(2, "Error\n", 6);
 	exit(1);
 }
-

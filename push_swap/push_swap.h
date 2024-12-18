@@ -19,9 +19,9 @@
 
 typedef struct s_node
 {
-	int				val;
-	struct s_node	*prev;
-	struct s_node	*next;
+	int				value;
+	struct s_node	*prev; //puntero al nodo anterior
+	struct s_node	*next; //puntero al siguiente
 }					t_node;
 
 typedef struct s_stack
@@ -42,5 +42,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	print_error(void);
 int		scan_error(int ac, char *av[]);
+int		search_dups(t_stack *stack);
+int		empty_string(char *str);
 
 #endif
