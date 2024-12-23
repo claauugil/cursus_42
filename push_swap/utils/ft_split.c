@@ -35,14 +35,13 @@ static int	word_counter(char const *s, char delimiter)
 	return (word_index);
 }
 
-static char	**free_matrix(int position, char **matrix)
+void	free_split(int position, char **matrix)
 {
 	while (position >= 0)
 	{
 		free(matrix[position--]);
 	}
 	free(matrix);
-	return (NULL);
 }
 
 static char	**fill_matrix(const char *s, char delimiter, char **matrix)
@@ -65,7 +64,7 @@ static char	**fill_matrix(const char *s, char delimiter, char **matrix)
 			{
 				matrix[position] = ft_substr(s, start, i - start);
 				if (!matrix[position])
-					return (free_matrix(position, matrix));
+					return (free_split(position, matrix), NULL);
 				position++;
 			}
 		}

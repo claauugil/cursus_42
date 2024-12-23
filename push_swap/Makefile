@@ -1,6 +1,16 @@
 NAME = push_swap
 
-SRC = 
+SRC = utils/errors.c \
+	  utils/ft_atoi.c \
+	  utils/ft_is_digit.c \
+	  utils/ft_split.c \
+	  utils/ft_strdup.c \
+	  utils/ft_strjoin.c \
+	  utils/ft_strlcpy.c \
+	  utils/ft_strlen.c \
+	  utils/ft_strcmp.c \
+	  utils/ft_substr.c \
+	  utils/ft_calloc.c \
 
 OBJ = $(SRC:.c=.o)
 

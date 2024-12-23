@@ -19,14 +19,14 @@ int	main(int ac, char *av[])
 
 	if (scan_error(ac, av))
 		print_error();
-	stack_a = init_stack(); //inicializo stack
-	stack_b = init_stack();
-	if (!stack_a || !stack_b) // si la funcion devuelve NULL
+	stack_a = create_stack();
+	stack_b = create_stack();
+	if (!stack_a || !stack_b)
 		print_error();
-	process_init_stack(ac, av, stack_a);
+	init_stack(ac, av, stack_a);
 	if (search_dups(stack_a)) // si la funcion devuelve 1
 		print_error();
-	if (!is_sorted(stack_a))
+	if (!is_sorted(stack_a)) // si no estan sorteados
 		sort(stack_a, stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
@@ -38,23 +38,11 @@ int	scan_error(int ac, char *av[])
 	int	i;
 
 	i = 1;
-	if (ac > 1 && empty_string(av[1])) // si la string esta vacia
+	if (ac > 1 && empty_string(av[1]))
 		return (1);
-	if (ac == 1) //si no hay suficientes argumentos
+	if (ac == 1)
 		return (1);
-	while (i < ac)
-	{
-		if (!int_range(av[i])) // si devuelve 0
-			return (1);
-		i++;
-	}
-	if (!validate_input(ac, av)) // si retorna 0
+	if (!validate_input(ac, av))
 		return (1);
 	return (0);
-}
-
-void	print_error(void)
-{
-	write(2, "Error\n", 6);
-	exit(1);
 }

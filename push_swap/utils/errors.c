@@ -24,7 +24,7 @@ int	search_dups(t_stack *stack)
 		while (rest != NULL)
 		{
 			if (actual->value == rest->value)
-				return (1);
+				return (1); // si encuentra duplicados
 			rest = rest->next;
 		}
 		actual = actual->next;
@@ -45,19 +45,9 @@ int	empty_string(char *str)
 	}
 	return (1);
 }
-int int_range(char *str)
+
+void	print_error(void)
 {
-	if(*str == '-')
-	{
-		if (ft_strlen(str) > 11 || (ft_strlen(str) == 11
-			&& ft_strncmp(str, "-2147483648", 11) > 0))
-				return (0); // si esta fuera del rango
-		else
-		{
-			if (ft_strlen(str) > 10 || (ft_strlen(str) == 10
-				 && ft_strncmp(str, "2147483647", 10)> 0))
-				 return (0); // si esta fuera del rango
-		}
-	}
-	return (1); // si esta dentro del rango
+	write(2, "Error\n", 6);
+	exit(1);
 }
