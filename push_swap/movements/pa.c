@@ -28,9 +28,9 @@ void	pa(t_stack *a, t_stack *b)
 	if (a->top != NULL)
 		a->top->prev = node; // el prev del top de a apunta al nodo que sera el  nuevo top
 	else
-		a->bottom = node;
-	a->top = node;
-	node->prev = NULL;
+		a->bottom = node; // si es el unico nodo en a
+	a->top = node; // actualizo el top de a
+	node->prev = NULL; // como es el primero su prev es NULL
 	a->size++;
 	b->size--;
 	write(1 ,"pa\n", 3);

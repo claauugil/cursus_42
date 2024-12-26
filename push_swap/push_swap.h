@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-17 11:05:17 by cgil              #+#    #+#             */
-/*   Updated: 2024-12-17 11:05:17 by cgil             ###   ########.fr       */
+/*   Created: 2024/12/17 11:05:17 by cgil              #+#    #+#             */
+/*   Updated: 2024/12/26 17:51:57 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,10 @@ t_stack	*create_stack(void);
 void	push_stack(t_stack *stack, int value);
 void	free_stack(t_stack *stack);
 void	init_stack(int ac, char *av[], t_stack *stack);
+void	pa(t_stack *a, t_stack *b);
+void 	pb(t_stack *a, t_stack *b);
+void    ra(t_stack *a);
+void    rb(t_stack *b);
+void	rr(t_stack *a, t_stack *b);
 
 #endif
