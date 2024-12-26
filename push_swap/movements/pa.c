@@ -17,7 +17,7 @@ void	pa(t_stack *a, t_stack *b)
 	t_node	*node;
 
 	if (b->top == NULL)
-		return ;
+		return ; // si no hay nada en b 
 	node = b->top;
 	b->top = node->next;
 	if (b->top != NULL)// si todavia hay nodos en b

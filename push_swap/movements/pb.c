@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
+/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 14:25:04 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/24 15:20:30 by cgil             ###   ########.fr       */
+/*   Created: 2024-12-26 12:18:14 by cgil              #+#    #+#             */
+/*   Updated: 2024-12-26 12:18:14 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_isdigit(int n)
+void pb(t_stack *a, t_stack *b)
 {
-	if (n >= '0' && n <= '9')
-	{
-		return (1);
-	}
-	return (0);
+	t_node 	*node;
 }
