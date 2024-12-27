@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra.c                                              :+:      :+:    :+:   */
+/*   rrr.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 17:56:17 by claudia           #+#    #+#             */
-/*   Updated: 2024/12/26 18:49:38 by claudia          ###   ########.fr       */
+/*   Created: 2024-12-27 11:56:13 by cgil              #+#    #+#             */
+/*   Updated: 2024-12-27 11:56:13 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rra(t_stack *a)
+void	rrr(t_stack *a, t_stack *b)
 {
 	t_node	*node;
+	t_node	*sec_node;
 
 	if (!a->top || a->top == a->bottom)
 		return ;
@@ -25,5 +26,14 @@ void	rra(t_stack *a)
 	node->next = a->top;
 	a->top->prev = node;
 	a->top = node;
-	write(1, "rra\n", 4);
+	if (!b->top || b->top == b->bottom)
+		return ;
+	sec_node = b->bottom;
+	b->bottom = sec_node->prev;
+	b->bottom->next = NULL;
+	sec_node->prev = NULL;
+	sec_node->next = b->top;
+	b->top->prev = sec_node;
+	b->top = sec_node;
+	write(1, "rrr\n", 4);
 }

@@ -12,22 +12,22 @@
 
 #include "push_swap.h"
 
-int	search_dups(t_stack *stack)
+int	search_dups(int ac, char *av[])
 {
-	t_node	*actual;
-	t_node	*rest;
+	int	i;
+	int	j;
 
-	actual = stack->top;
-	while (actual != NULL)
+	i = 1;
+	while (i < ac)
 	{
-		rest = actual->next;
-		while (rest != NULL)
+		j = i + i;
+		while (j < ac)
 		{
-			if (actual->value == rest->value)
-				return (1); // si encuentra duplicados
-			rest = rest->next;
+			if (ft_atoi(av[i] == ft_atoi(av[j])))
+				return (1);
+			j++;
 		}
-		actual = actual->next;
+		i++;
 	}
 	return (0);
 }
@@ -40,7 +40,7 @@ int	empty_string(char *str)
 	{
 		if (*str != ' ' && *str != '\t' && *str != '\n'
 			&& *str != '\v' && *str != '\f' && *str != '\r')
-			return (0); // si es un caracter distinto de espacios
+			return (0);
 		str++;
 	}
 	return (1);

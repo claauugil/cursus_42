@@ -12,8 +12,7 @@
 
 #include "push_swap.h"
 
-//crea un nodo, no lo inserta en a lista
-t_node	*new_node(int value) // valor que define el contenido del nodo
+t_node	*new_node(int value)
 {
 	t_node	*node;
 
@@ -25,8 +24,6 @@ t_node	*new_node(int value) // valor que define el contenido del nodo
 	node->prev = NULL;
 	return (node);
 }
-
-//inicializa el stack
 
 t_stack	*create_stack(void)
 {
@@ -40,16 +37,15 @@ t_stack	*create_stack(void)
 	stack->size = 0;
 	return (stack);
 }
-//agrega un valor nuevo al stack
 
 void	push_stack(t_stack *stack, int value)
 {
 	t_node	*node;
 
-	node = new_node(value); //nodo para guardar valor
+	node = new_node(value);
 	if (!node)
 		return ;
-	if (stack->size == 0) // si la pila esta vacia
+	if (stack->size == 0)
 	{
 		stack->top = node;
 		stack->bottom = node;
@@ -74,7 +70,7 @@ void	init_stack(int ac, char *av[], t_stack *stack)
 		i = 0;
 		while (nums[i])
 			i++;
-		while (i > 0) // va hacia atras para rellenar la pila en orden
+		while (i > 0)
 		{
 			i--;
 			push_stack(stack, ft_atoi(nums[i]));
@@ -91,7 +87,6 @@ void	init_stack(int ac, char *av[], t_stack *stack)
 		}
 	}
 }
-//libera stack desde el ultimo al primero
 
 void	free_stack(t_stack *stack)
 {

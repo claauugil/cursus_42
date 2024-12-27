@@ -43,7 +43,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	print_error(void);
 int		scan_error(int ac, char *av[]);
-int		search_dups(t_stack *stack);
+int		search_dups(int ac, char *av[]);
 int		empty_string(char *str);
 int		int_range(char *str);
 int		is_numeric_input(char *str);
@@ -56,9 +56,13 @@ void	push_stack(t_stack *stack, int value);
 void	free_stack(t_stack *stack);
 void	init_stack(int ac, char *av[], t_stack *stack);
 void	pa(t_stack *a, t_stack *b);
-void 	pb(t_stack *a, t_stack *b);
-void    ra(t_stack *a);
-void    rb(t_stack *b);
+void	pb(t_stack *a, t_stack *b);
+void	ra(t_stack *a);
+void	rb(t_stack *b);
 void	rr(t_stack *a, t_stack *b);
+void	rra(t_stack *a);
+void	rrb(t_stack *b);
+void	rrr(t_stack *a, t_stack *b);
+void	sa(t_stack *a);
 
 #endif

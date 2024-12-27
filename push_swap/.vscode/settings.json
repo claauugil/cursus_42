@@ -1,5 +1,6 @@
 {
 	"files.associations": {
-		"validate_inputs": "cpp"
+		"validate_inputs": "cpp",
+		"push_swap.h": "c"
 	}
 }

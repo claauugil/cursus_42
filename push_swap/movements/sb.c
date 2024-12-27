@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rb.c                                               :+:      :+:    :+:   */
+/*   sb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 17:13:14 by claudia           #+#    #+#             */
-/*   Updated: 2024/12/26 17:44:32 by claudia          ###   ########.fr       */
+/*   Created: 2024-12-27 12:16:17 by cgil              #+#    #+#             */
+/*   Updated: 2024-12-27 12:16:17 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rb(t_stack *b)
+void	sb(t_stack *b)
 {
-	t_node	*node;
+	t_node	*first;
+	t_node	*second;
 
 	if (!b->top || b->top == b->bottom)
 		return ;
-	node = b->top;
-	b->top = node->next;
-	b->top->prev = NULL;
-	b->bottom->next = node;
-	node->prev = b->bottom;
-	node->next = NULL;
-	b->bottom = node;
-	write(1, "rb\n", 3);
+	first = b->top;
+	second = first->next;
+	first->next = second->next;
+	if (second->next)
+		second->next->prev = first;
+	second->prev = NULL;
+	second->next = first;
+	b->top = second;
+	first->prev = second;
+	write(1, "sb\n", 3);
 }

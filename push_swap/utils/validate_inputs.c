@@ -21,15 +21,15 @@ int	int_range(char *str)
 	{
 		if (len > 11 || (len == 11
 				&& ft_strncmp(str, "-2147483648", 11) > 0))
-			return (0); // si esta fuera del rango
+			return (0);
 	}
 	else
 	{
 		if (len > 10 || (len == 10
 				&& ft_strncmp(str, "2147483647", 10) > 0))
-			return (0);// si esta fuera del rango
+			return (0);
 	}
-	return (1); // si esta dentro del rango
+	return (1);
 }
 
 int	is_numeric_input(char *str)
@@ -40,14 +40,14 @@ int	is_numeric_input(char *str)
 	if (str[i] == '+' || str[i] == '-')
 		i++;
 	if (str[i] == '\0')
-		return (0); // input invalido
+		return (0);
 	while (str[i] != '\0')
 	{
-		if (!ft_isdigit(str[i])) // si retorna 0
+		if (!ft_isdigit(str[i]))
 			return (0);
 		i++;
 	}
-	return (1); // si es valido
+	return (1);
 }
 
 int	many_inputs(int ac, char *av[])
@@ -57,8 +57,8 @@ int	many_inputs(int ac, char *av[])
 	i = 1;
 	while (i < ac)
 	{
-		if (!is_numeric_input(av[i]) || !int_range(av[i])) // si retorna  0
-			return (0); // si es invalido
+		if (!is_numeric_input(av[i]) || !int_range(av[i]))
+			return (0);
 		i++;
 	}
 	return (1);
@@ -75,15 +75,15 @@ int	only_input(char *str)
 		return (0);
 	while (nums[i])
 	{
-		if (!is_numeric_input(nums[i]) || !int_range(nums[i])) // si alguna retorna 0
+		if (!is_numeric_input(nums[i]) || !int_range(nums[i]))
 		{
 			free_split(i, nums);
-			return (0); // invalido
+			return (0);
 		}
 		i++;
 	}
 	free_split(i, nums);
-	return (1); // valido
+	return (1);
 }
 
 int	validate_input(int ac, char *av[])
