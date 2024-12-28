@@ -12,6 +12,20 @@
 
 #include "push_swap.h"
 
+int	scan_error(int ac, char *av[])
+{
+	int	i;
+
+	i = 1;
+	if (ac > 1 && empty_string(av[1]))
+		return (1);
+	if (ac == 1)
+		return (1);
+	if (!validate_input(ac, av))
+		return (1);
+	return (0);
+}
+
 int	main(int ac, char *av[])
 {
 	t_stack	*stack_a;
@@ -30,19 +44,5 @@ int	main(int ac, char *av[])
 		sort(stack_a, stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
-	return (0);
-}
-
-int	scan_error(int ac, char *av[])
-{
-	int	i;
-
-	i = 1;
-	if (ac > 1 && empty_string(av[1]))
-		return (1);
-	if (ac == 1)
-		return (1);
-	if (!validate_input(ac, av))
-		return (1);
 	return (0);
 }

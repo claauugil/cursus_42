@@ -12,6 +12,59 @@
 
 #include "push_swap.h"
 
+//busca un nodo en la pila y calcula su profundidad la profundidad
+
+int	get_depth(t_stack *stack, int val)
+{
+	int		i;
+	t_node	*actual;
+
+	i = 0;
+	actual = stack->top;
+	while (actual)
+	{
+		if (actual->value == val) // si encuentra un nodo igual al que busca
+		{
+			if (i <= stack->size / 2) // si esta en la mitad superior de la pila
+				return (i);
+			else
+				return (i - stack->size); // si esta en la mitad inferior de la pila
+		}
+		i++;
+		actual = actual->next;
+	}
+}
+
+void	bring_to_top(t_stack *a, int target)
+{
+	int		depth;
+
+	depth = get_depth(a, target);
+	while (depth != 0)
+	{
+		if (depth < 0)
+		{
+			rra(a);
+			depth++;
+		}
+		if (depth > 0)
+		{
+			ra(a);
+			depth--;
+		}
+	}
+}
+
+void	bring_min_to_top(t_stack *stack)
+{
+	int	min_value;
+
+	if (!stack || !stack->top)
+		return ;
+	min_value = get_smallest(stack); //falta
+	bring_to_top(stack, min_value);
+}
+
 void	sort_two(t_stack *stack)
 {
 	if (!stack || !stack->top || !stack->top->next)

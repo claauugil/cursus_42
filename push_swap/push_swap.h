@@ -13,6 +13,7 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <limits.h>
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
@@ -64,5 +65,10 @@ void	rra(t_stack *a);
 void	rrb(t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
 void	sa(t_stack *a);
+void	sort(t_stack *a, t_stack *b);
+void	sort_two(t_stack *stack);
+int		is_sorted(t_stack *stack);
+void	sort_three(t_stack *a);
+
 
 #endif
