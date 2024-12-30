@@ -34,7 +34,7 @@ int	is_smallest(t_stack *in_stack, int n)
 {
 	t_node	*actual;
 
-	if (in_stack->top)
+	if (!in_stack->top)
 		return (INT_MIN);
 	actual = in_stack->top;
 	while (actual)
@@ -70,7 +70,7 @@ int	find_smallest(t_stack *to_find)
 	int	min;
 
 	if (!to_find->top)
-		return(INT_MAX);
+		return(INT_MIN);
 	actual = to_find->top;
 	min = actual->value;
 	while (actual)
