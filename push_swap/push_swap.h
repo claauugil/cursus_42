@@ -69,6 +69,10 @@ void	sort(t_stack *a, t_stack *b);
 void	sort_two(t_stack *stack);
 int		is_sorted(t_stack *stack);
 void	sort_three(t_stack *a);
-
+int	max(int a, int b);
+int	is_biggest(t_stack *in_stack, int n);
+int	is_smallest(t_stack *in_stack, int n);
+int	find_biggest(t_stack *to_find);
+int	find_smallest(t_stack *to_find);
 
 #endif

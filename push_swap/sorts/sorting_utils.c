@@ -14,21 +14,21 @@
 
 //busca un nodo en la pila y calcula su profundidad la profundidad
 
-int	get_depth(t_stack *stack, int val)
+int	get_depth(t_stack *in_stack, int val)
 {
 	int		i;
 	t_node	*actual;
 
 	i = 0;
-	actual = stack->top;
+	actual = in_stack->top;
 	while (actual)
 	{
 		if (actual->value == val) // si encuentra un nodo igual al que busca
 		{
-			if (i <= stack->size / 2) // si esta en la mitad superior de la pila
+			if (i <= in_stack->size / 2) // si esta en la mitad superior de la pila
 				return (i);
 			else
-				return (i - stack->size); // si esta en la mitad inferior de la pila
+				return (i - in_stack->size); // si esta en la mitad inferior de la pila
 		}
 		i++;
 		actual = actual->next;
@@ -55,14 +55,15 @@ void	bring_to_top(t_stack *a, int target)
 	}
 }
 
-void	bring_min_to_top(t_stack *stack)
+//por si el minimo no queda de primero
+void	bring_min_to_top(t_stack *in_stack)
 {
 	int	min_value;
 
-	if (!stack || !stack->top)
+	if (!in_stack || !in_stack->top)
 		return ;
-	min_value = get_smallest(stack); //falta
-	bring_to_top(stack, min_value);
+	min_value = find_smallest(in_stack);
+	bring_to_top(in_stack, min_value);
 }
 
 void	sort_two(t_stack *stack)
