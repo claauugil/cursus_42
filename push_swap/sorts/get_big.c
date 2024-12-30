@@ -12,22 +12,21 @@
 
 #include "push_swap.h"
 
-// verifica si n es el numero mas grande de la pila
 
 int	is_biggest(t_stack *in_stack, int n)
 {
 	t_node	*actual;
 
 	if (!in_stack->top)
-		return (INT_MIN); //  para indicar que la pila esta vacia
+		return (INT_MIN);
 	actual = in_stack->top;
 	while(actual)
 	{
 		if (n < actual->value)
-			return (0); // si no es el mayor
+			return (0);
 		actual = actual->next;
 	}
-	return (1); // retorna 1 si es el mayor
+	return (1);
 }
 
 int	is_smallest(t_stack *in_stack, int n)
@@ -40,7 +39,7 @@ int	is_smallest(t_stack *in_stack, int n)
 	while (actual)
 	{
 		if (n > actual->value)
-			return (0); // si no es el menor
+			return (0);
 		actual = actual->next;
 	}
 	return (1);
