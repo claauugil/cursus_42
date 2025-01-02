@@ -74,5 +74,6 @@ int	is_biggest(t_stack *in_stack, int n);
 int	is_smallest(t_stack *in_stack, int n);
 int	find_biggest(t_stack *to_find);
 int	find_smallest(t_stack *to_find);
+int	get_depth(t_stack *in_stack, int val);
 
 #endif

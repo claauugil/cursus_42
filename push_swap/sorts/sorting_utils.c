@@ -55,7 +55,6 @@ void	bring_to_top(t_stack *a, int target)
 	}
 }
 
-//por si el minimo no queda de primero
 void	bring_min_to_top(t_stack *in_stack)
 {
 	int	min_value;

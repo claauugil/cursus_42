@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-
 int	is_biggest(t_stack *in_stack, int n)
 {
 	t_node	*actual;
