@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-27 15:22:10 by cgil              #+#    #+#             */
-/*   Updated: 2024-12-27 15:22:10 by cgil             ###   ########.fr       */
+/*   Created: 2024/12/27 15:22:10 by cgil              #+#    #+#             */
+/*   Updated: 2025/01/03 16:34:18 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-//busca un nodo en la pila y calcula su profundidad la profundidad
 
 int	get_depth(t_stack *in_stack, int val)
 {
@@ -23,12 +21,12 @@ int	get_depth(t_stack *in_stack, int val)
 	actual = in_stack->top;
 	while (actual)
 	{
-		if (actual->value == val) // si encuentra un nodo igual al que busca
+		if (actual->value == val)
 		{
-			if (i <= in_stack->size / 2) // si esta en la mitad superior de la pila
+			if (i <= in_stack->size / 2)
 				return (i);
 			else
-				return (i - in_stack->size); // si esta en la mitad inferior de la pila
+				return (i - in_stack->size);
 		}
 		i++;
 		actual = actual->next;

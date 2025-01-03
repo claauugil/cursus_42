@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-28 10:46:24 by cgil              #+#    #+#             */
-/*   Updated: 2024-12-28 10:46:24 by cgil             ###   ########.fr       */
+/*   Created: 2024/12/28 10:46:24 by cgil              #+#    #+#             */
+/*   Updated: 2025/01/03 17:52:35 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-//  recorre todos los nodos de b
-// para cada uno, determina su posición correcta en a
 
 void	push_back(t_stack *b, t_stack *a)
 {
@@ -36,7 +33,7 @@ void	sort(t_stack *a, t_stack *b)
 {
 	int	to_move;
 
-	to_move = INT_MIN; // cualquier numero a comparar será reemplazado por lo que devuelva cheapest
+	to_move = INT_MIN;
 	if (a->size == 2)
 	{
 		sort_two(a);
@@ -46,10 +43,10 @@ void	sort(t_stack *a, t_stack *b)
 		pb(a, b);
 	if (a->size >= 5)
 		pb(a, b);
-	while (a->size > 3) // mueve el nodo mas barato hasta que queden solo 3 en a
+	while (a->size > 3)
 	{
-		to_move = find_cheapest(a, b); // consigue el mas barato de a
-		push_cheapest(a, b, to_move); // mueve el nodo mas barato a b
+		to_move = check_cheapest(a, b);
+		push_cheapest(a, b, to_move);
 	}
 	sort_three(a);
 	if (b->size != 0)

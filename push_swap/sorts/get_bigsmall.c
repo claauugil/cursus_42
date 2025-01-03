@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_big.c                                          :+:      :+:    :+:   */
+/*   get_bigsmall.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-30 12:09:49 by cgil              #+#    #+#             */
-/*   Updated: 2024-12-30 12:09:49 by cgil             ###   ########.fr       */
+/*   Created: 2024/12/30 12:09:49 by cgil              #+#    #+#             */
+/*   Updated: 2025/01/03 16:45:19 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	is_biggest(t_stack *in_stack, int n)
 	if (!in_stack->top)
 		return (INT_MIN);
 	actual = in_stack->top;
-	while(actual)
+	while (actual)
 	{
 		if (n < actual->value)
 			return (0);
@@ -65,16 +65,16 @@ int	find_biggest(t_stack *to_find)
 int	find_smallest(t_stack *to_find)
 {
 	t_node	*actual;
-	int	min;
+	int		min;
 
 	if (!to_find->top)
-		return(INT_MIN);
+		return (INT_MIN);
 	actual = to_find->top;
 	min = actual->value;
 	while (actual)
 	{
 		if (min > actual->value)
-			min =actual->value;
+			min = actual->value;
 		actual = actual->next;
 	}
 	return (min);
@@ -84,5 +84,5 @@ int	max(int a, int b)
 {
 	if (a < b)
 		return (a);
-	return(b);
+	return (b);
 }

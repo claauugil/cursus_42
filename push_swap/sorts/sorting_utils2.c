@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_utils2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-28 12:26:17 by cgil              #+#    #+#             */
-/*   Updated: 2024-12-28 12:26:17 by cgil             ###   ########.fr       */
+/*   Created: 2024/12/28 12:26:17 by cgil              #+#    #+#             */
+/*   Updated: 2025/01/03 16:51:23 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	largest_at_top(t_stack *a)
 {
 	if (a->top->next->value < a->top->next->next->value)
-		ra(a); // si el segundo es mayor que el tercero
+		ra(a);
 	else
 	{
 		sa(a);
@@ -41,11 +41,11 @@ void	sort_three(t_stack *a)
 	if (first < second && second < third)
 		return ;
 	if (first > second && second < third && first < third)
-		sa(a); // si el mayor esta de ultimo y los dos primeros desordenados
-	else if (first > second && first > third) // si el mayor esta de primero
+		sa(a);
+	else if (first > second && first > third)
 		largest_at_top(a);
 	else if (first < second && first > third)
-		rra(a); // si el mas grande esta en el medio
+		rra(a);
 	else if (first < second && second > third)
 		smallest_in_middle(a);
 }

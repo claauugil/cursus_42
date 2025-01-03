@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:05:17 by cgil              #+#    #+#             */
-/*   Updated: 2024/12/26 17:51:57 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/03 17:53:30 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,17 @@ void	sort(t_stack *a, t_stack *b);
 void	sort_two(t_stack *stack);
 int		is_sorted(t_stack *stack);
 void	sort_three(t_stack *a);
-int	max(int a, int b);
-int	is_biggest(t_stack *in_stack, int n);
-int	is_smallest(t_stack *in_stack, int n);
-int	find_biggest(t_stack *to_find);
-int	find_smallest(t_stack *to_find);
-int	get_depth(t_stack *in_stack, int val);
+int		max(int a, int b);
+int		is_biggest(t_stack *in_stack, int n);
+int		is_smallest(t_stack *in_stack, int n);
+int		find_biggest(t_stack *to_find);
+int		find_smallest(t_stack *to_find);
+int		get_depth(t_stack *in_stack, int val);
+int		ft_abs(int n);
+int		calculate_combined_moves(int f_depth, int target_depth);
+int		get_combined_moves(t_stack *from, t_stack *to, int value);
+void	update_cheapest(int *actual_moves, int combined_moves,
+			int *cheapest_value, int value);
+int		check_cheapest(t_stack *from, t_stack *to);
 
 #endif
