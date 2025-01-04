@@ -81,5 +81,8 @@ int		get_combined_moves(t_stack *from, t_stack *to, int value);
 void	update_cheapest(int *actual_moves, int combined_moves,
 			int *cheapest_value, int value);
 int		check_cheapest(t_stack *from, t_stack *to);
+int		get_target(t_stack *search, int n, int up_low);
+int		find_near_lower(t_stack *search, int n);
+int		find_near_upper(t_stack *to_search, int target);
 
 #endif

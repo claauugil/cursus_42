@@ -14,7 +14,6 @@
 
 int	get_target(t_stack *search, int n, int up_low)
 {
-	// si es el mas chico o el mas grande
 	if (is_biggest(search, n), is_smallest(search, n))
 		return (find_biggest(search)); // se busca el mas grande
 	else if (up_low) // si es distinto de 0
@@ -27,17 +26,17 @@ int	get_target(t_stack *search, int n, int up_low)
 
 int	find_near_lower(t_stack *search, int n)
 {
-	int	dif;
-	int	target;
+	int		dif;
+	int		target;
 	t_node	*actual;
 
 	if (!search->top)
 		return (INT_MIN);
-	dif = INT_MAX; // diferencia minima enontrada entre n y un valor de a pila, siempre va a encontrar algo menor
-	target = INT_MIN; // el nodo mas cercano inferior a n
+	dif = INT_MAX;
+	target = INT_MIN;
 	actual = search->top;
 	while (actual)
-	{  //que n sea mayor que actual value
+	{
 		if (n - actual->value < dif && n - actual->value > 0)
 		{
 			dif = n - actual->value;
@@ -46,4 +45,31 @@ int	find_near_lower(t_stack *search, int n)
 		actual = actual->next;
 	}
 	return (target);
+}
+
+int	find_near_upper(t_stack *to_search, int target)
+{
+	t_node	*actual;
+	int		near_value; // valor mas cercano encontrado que es mayor que target
+	int		near_dif; // diferencia minima entre los valores mayores que el objetivo
+	int		dif; // diferencia temporal entre el valor actual del nodo y del objetivo
+
+	if (!to_search || !to_search->top)
+		return (INT_MIN);
+	actual = to_search->top;
+	near_value = INT_MIN;
+	near_dif = INT_MAX;
+	if (is_biggest(to_search, target))
+		return (INT_MAX);
+	while (actual)
+	{
+		dif = actual->value - target;
+		if (dif > 0 && dif < near_dif)
+		{
+			near_dif = dif;
+			near_value = actual->value;
+		}
+		actual = actual->next;
+	}
+	return (near_value);
 }
