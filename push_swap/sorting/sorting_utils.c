@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	get_depth(t_stack *in_stack, int val)
 {
@@ -31,6 +31,7 @@ int	get_depth(t_stack *in_stack, int val)
 		i++;
 		actual = actual->next;
 	}
+	return (INT_MIN);
 }
 
 void	bring_to_top(t_stack *a, int target)

@@ -33,15 +33,16 @@ int	main(int ac, char *av[])
 
 	if (scan_error(ac, av))
 		print_error();
-	if (search_dups(ac, av))
-		print_error();
 	stack_a = create_stack();
 	stack_b = create_stack();
 	if (!stack_a || !stack_b)
 		print_error();
 	init_stack(ac, av, stack_a);
+	if (search_dups(stack_a))
+		print_error();
 	if (!is_sorted(stack_a))
 		sort(stack_a, stack_b);
+	print_stacks(stack_a,stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	return (0);

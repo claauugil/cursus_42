@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 18:45:23 by cgil              #+#    #+#             */
-/*   Updated: 2024/10/09 13:44:29 by cgil             ###   ########.fr       */
+/*   Created: 2024/09/23 12:55:25 by cgil              #+#    #+#             */
+/*   Updated: 2024/09/24 15:18:08 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-char	*ft_strdup(const char *s)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*copy;
-	int		i;
+	unsigned char	*ptr;
+	size_t			i;
 
+	ptr = (unsigned char *)s;
 	i = 0;
-	copy = malloc(ft_strlen(s) + 1);
-	if (!copy)
-		return (NULL);
-	while (s[i] != '\0')
+	while (i < n)
 	{
-		copy[i] = s[i];
+		ptr[i] = 0;
 		i++;
 	}
-	copy[i] = '\0';
-	return (copy);
 }

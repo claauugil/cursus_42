@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_abs(int n)
 {
@@ -21,7 +21,7 @@ int	ft_abs(int n)
 
 int	calculate_combined_moves(int f_depth, int target_depth)
 {
-	if ((f_depth > 0 && target_depth > 0) || f_depth < 0 && target_depth < 0)
+	if ((f_depth > 0 && target_depth > 0) || (f_depth < 0 && target_depth < 0))
 		return (max(ft_abs(f_depth), ft_abs(target_depth)));
 	return (ft_abs(f_depth) + ft_abs(target_depth));
 }

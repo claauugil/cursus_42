@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	rotate_f_t(t_stack *from, int *depth)
 {
@@ -19,7 +19,7 @@ void	rotate_f_t(t_stack *from, int *depth)
 		ra(from);
 		(*depth)--;
 	}
-	else
+	else if (*depth < 0)
 	{
 		rra(from);
 		(*depth)++;
@@ -35,7 +35,7 @@ void	rotate_tgt_to(t_stack *to, int *depth)
 	}
 	else
 		rrb(to);
-		(*depth)++;
+	(*depth)++;
 }
 
 void	rotates(t_stack *from, t_stack *to, int *val_depth, int *tar_depth)
@@ -56,5 +56,27 @@ void	rotates(t_stack *from, t_stack *to, int *val_depth, int *tar_depth)
 
 void	rotate_each(t_stack *from, int *val_depth, t_stack *to, int *tar_depth)
 {
-	
+	 rotate_f_t(from, val_depth);
+	 rotate_tgt_to(to, tar_depth);
+}
+
+// mover el elemento mas barato de from a to
+
+int	push_cheapest(t_stack *from, t_stack *to, int val)
+{
+	int	val_depth;
+	int	target;
+	int	target_depth;
+
+	val_depth = get_depth(from, val);
+	target = get_target(to, val, 1);
+	target_depth = get_depth(to, target);
+	while (val != 0 || target_depth != 0)
+	{
+		if ((val_depth > 0 && target_depth > 0) || (val_depth < 0 && target_depth < 0))
+			rotates(from, to, &val_depth, &target_depth);
+		else
+			rotate_each(from, &val_depth, to, &target_depth);
+	}
+	return (pb(from, to), 0);
 }

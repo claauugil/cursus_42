@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	push_back(t_stack *b, t_stack *a)
 {
@@ -20,7 +20,7 @@ void	push_back(t_stack *b, t_stack *a)
 	actual = b->top;
 	while (actual)
 	{
-		target = find_closest_upper(a, actual->value);
+		target = find_near_upper(a, actual->value);
 		if (target == INT_MAX)
 			target = find_smallest(a);
 		bring_to_top(a, target);
