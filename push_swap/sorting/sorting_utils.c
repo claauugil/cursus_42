@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:22:10 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 12:19:12 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/08 16:08:43 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	get_depth(t_stack *in_stack, int val)
 
 void	bring_to_top(t_stack *a, int target)
 {
-	int		depth;
+	int	depth;
 
 	depth = get_depth(a, target);
 	while (depth != 0)

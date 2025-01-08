@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:05:17 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 13:11:12 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/08 16:14:40 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,21 +91,14 @@ int		check_cheapest(t_stack *from, t_stack *to);
 int		get_target(t_stack *search, int n, int up_low);
 int		find_near_lower(t_stack *search, int n);
 int		find_near_upper(t_stack *to_search, int target);
-//void	rotate_f_t(t_stack *from, int *depth);
-//void	rotate_tgt_to(t_stack *to, int *depth);
-//void	rotates(t_stack *from, t_stack *to, int *val_depth, int *tar_depth);
-//void	rotate_each(t_stack *from, int *val_depth, t_stack *to, int *tar_depth);
-//int		push_cheapest(t_stack *from, t_stack *to, int val);
-void	print_stacks(t_stack *stack_a, t_stack *stack_b);
+void	rotate_f_t(t_stack *from, int *depth);
+void	rotate_tgt_to(t_stack *to, int *depth);
+void	rotates(t_stack *from, t_stack *to, int *val_depth, int *tar_depth);
+void	rotate_each(t_stack *from, int *val_depth, t_stack *to, int *tar_depth);
+int		push_cheapest(t_stack *from, t_stack *to, int val);
+//void	print_stacks(t_stack *stack_a, t_stack *stack_b);
 
-void	rotate_from_to(t_stack *from, int *depth);
-void	rotate_target_to(t_stack *to, int *depth);
-void	rotate_both(t_stack *from, t_stack *to, int *n_depth, int *target_depth);
-void	rotate_separately(t_stack *from, int *n_depth, t_stack *to,
-		int *target_depth);
-int	push_cheapest(t_stack *from, t_stack *to, int n);
+// COUNT ONE: GUILTY
 
 
-//
-void	handle_largest_at_top(t_stack *a);
 #endif

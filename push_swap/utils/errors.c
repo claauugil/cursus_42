@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:40:18 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 11:41:17 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/08 16:04:31 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	print_error(void)
 	exit(1);
 }
 
-void	print_stacks(t_stack *stack_a, t_stack *stack_b)
+/*void	print_stacks(t_stack *stack_a, t_stack *stack_b)
 {
 	t_node	*current_a;
 	t_node	*current_b;
@@ -79,4 +79,4 @@ void	print_stacks(t_stack *stack_a, t_stack *stack_b)
 		}
 		printf("\n");
 	}
-}
+}*/

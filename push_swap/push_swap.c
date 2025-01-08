@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:47:48 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 11:41:41 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/08 16:04:24 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int ac, char *av[])
 		print_error();
 	if (!is_sorted(stack_a))
 		sort(stack_a, stack_b);
-	print_stacks(stack_a,stack_b);
+	//print_stacks(stack_a,stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	return (0);

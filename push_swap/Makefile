@@ -1,5 +1,9 @@
 NAME = push_swap
 
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+RM = rm -f
+
 SRC = utils/errors.c \
 	  utils/ft_atoi.c \
       utils/ft_bzero.c \
@@ -35,17 +39,13 @@ SRC = utils/errors.c \
 
 OBJ = $(SRC:.c=.o)
 
-INCLUDES = -I./
-
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
+INCLUDES = push_swap.h
 
 all: $(NAME)
 	@echo "ok"
 
 $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@echo "Completed compilation"
 
 %.o: %.c $(INCLUDES)
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -61,3 +61,28 @@ fclean: clean
 re: fclean all
 
 .PHONY: clean fclean all re
+
+# OBJS = $(SRCS:.c=.o)
+
+# INCLUDES = push_swap.h
+
+# all: $(NAME)
+# 	@echo "ok"
+
+# $(NAME): $(OBJS)
+# 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+# %.o: %.c $(INCLUDES)
+# 	@$(CC) $(CFLAGS) -c $< -o $@
+
+# clean:
+# 	@$(RM) $(OBJS)
+# 	@echo "cleaned"
+
+# fclean: clean
+# 	@$(RM) $(NAME)
+# 	@echo "fully cleaned"
+
+# re: fclean all
+
+# .PHONY: all clean fclean re
