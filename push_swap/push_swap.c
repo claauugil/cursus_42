@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:47:48 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 09:28:44 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/08 11:41:41 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 int	scan_error(int ac, char *av[])
 {
-	//int	i;
-
-	//i = 1;
 	if (ac > 1 && empty_string(av[1]))
 		return (1);
 	if (ac == 1)

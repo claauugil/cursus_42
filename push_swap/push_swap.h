@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:05:17 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/03 17:53:30 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/08 13:11:12 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	print_error(void);
 int		scan_error(int ac, char *av[]);
 int		search_dups(t_stack *stack);
-// int		search_dups(int ac, char *av[]);
 int		empty_string(char *str);
 int		int_range(char *str);
 int		is_numeric_input(char *str);
@@ -72,6 +71,9 @@ void	sort(t_stack *a, t_stack *b);
 void	sort_two(t_stack *stack);
 int		is_sorted(t_stack *stack);
 void	sort_three(t_stack *a);
+void	push_back(t_stack *b, t_stack *a);
+void	largest_at_top(t_stack *a);
+void	smallest_in_middle(t_stack *a);
 int		max(int a, int b);
 int		is_biggest(t_stack *in_stack, int n);
 int		is_smallest(t_stack *in_stack, int n);
@@ -89,11 +91,21 @@ int		check_cheapest(t_stack *from, t_stack *to);
 int		get_target(t_stack *search, int n, int up_low);
 int		find_near_lower(t_stack *search, int n);
 int		find_near_upper(t_stack *to_search, int target);
-void	rotate_f_t(t_stack *from, int *depth);
-void	rotate_tgt_to(t_stack *to, int *depth);
-void	rotates(t_stack *from, t_stack *to, int *val_depth, int *tar_depth);
-void	rotate_each(t_stack *from, int *val_depth, t_stack *to, int *tar_depth);
-int		push_cheapest(t_stack *from, t_stack *to, int val);
+//void	rotate_f_t(t_stack *from, int *depth);
+//void	rotate_tgt_to(t_stack *to, int *depth);
+//void	rotates(t_stack *from, t_stack *to, int *val_depth, int *tar_depth);
+//void	rotate_each(t_stack *from, int *val_depth, t_stack *to, int *tar_depth);
+//int		push_cheapest(t_stack *from, t_stack *to, int val);
 void	print_stacks(t_stack *stack_a, t_stack *stack_b);
 
+void	rotate_from_to(t_stack *from, int *depth);
+void	rotate_target_to(t_stack *to, int *depth);
+void	rotate_both(t_stack *from, t_stack *to, int *n_depth, int *target_depth);
+void	rotate_separately(t_stack *from, int *n_depth, t_stack *to,
+		int *target_depth);
+int	push_cheapest(t_stack *from, t_stack *to, int n);
+
+
+//
+void	handle_largest_at_top(t_stack *a);
 #endif

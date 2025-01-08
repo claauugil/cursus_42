@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 10:46:24 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/03 17:52:35 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/08 13:20:11 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ void	push_back(t_stack *b, t_stack *a)
 	actual = b->top;
 	while (actual)
 	{
+		if (b->top == NULL)
+			break ;
+		actual = b->top;
 		target = find_near_upper(a, actual->value);
 		if (target == INT_MAX)
 			target = find_smallest(a);
@@ -56,3 +59,4 @@ void	sort(t_stack *a, t_stack *b)
 	}
 	return ;
 }
+	
