@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_cheapest.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-04 15:40:55 by cgil              #+#    #+#             */
-/*   Updated: 2025-01-04 15:40:55 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/04 15:40:55 by cgil              #+#    #+#             */
+/*   Updated: 2025/01/08 09:22:37 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	rotate_tgt_to(t_stack *to, int *depth)
 
 void	rotates(t_stack *from, t_stack *to, int *val_depth, int *tar_depth)
 {
-	if (*val_depth > 0 && tar_depth > 0)
+	if (*val_depth > 0 && *tar_depth > 0)
 	{
 		rr(from, to);
 		(*val_depth)--;
