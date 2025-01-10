@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 11:15:28 by cgil              #+#    #+#             */
-/*   Updated: 2024/10/04 11:30:01 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:08:46 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:06:45 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	ft_atoi(const char *nptr)
 {

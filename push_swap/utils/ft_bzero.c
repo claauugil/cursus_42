@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 12:55:25 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/24 15:18:08 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:09:23 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:07:39 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	ft_bzero(void *s, size_t n)
 {

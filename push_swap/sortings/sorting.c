@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/28 10:46:24 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 16:14:15 by claudia          ###   ########.fr       */
+/*   Created: 2025/01/09 17:23:33 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:05:52 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	push_back(t_stack *b, t_stack *a)
 {
@@ -23,7 +23,7 @@ void	push_back(t_stack *b, t_stack *a)
 		if (b->top == NULL)
 			break ;
 		actual = b->top;
-		target = find_near_upper(a, actual->value);
+		target = find_near_upper(a, actual->val);
 		if (target == INT_MAX)
 			target = find_smallest(a);
 		bring_to_top(a, target);
@@ -59,4 +59,3 @@ void	sort(t_stack *a, t_stack *b)
 	}
 	return ;
 }
-	

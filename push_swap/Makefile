@@ -1,88 +1,62 @@
 NAME = push_swap
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I. -g
 RM = rm -f
 
-SRC = utils/errors.c \
-	  utils/ft_atoi.c \
-      utils/ft_bzero.c \
-      utils/ft_isdigit.c \
-      utils/ft_split.c \
-      utils/ft_strdup.c \
-      utils/ft_strjoin.c \
-      utils/ft_strlcpy.c \
-      utils/ft_strlen.c \
-      utils/ft_strncmp.c \
-      utils/ft_substr.c \
-      utils/ft_calloc.c \
-      utils/stack_utils.c \
-      utils/validate_inputs.c \
-	  	sorting/check_cheapest.c \
-	  	sorting/get_big_small.c \
-	 	sorting/push_cheapest.c \
-	  	sorting/sorting_utils.c \
-		sorting/sorting_utils2.c \
-	  	sorting/sorting.c \
-	 	sorting/targets.c \
-	  movements/pa.c \
-	  movements/pb.c \
-	  movements/ra.c \
-	  movements/rb.c \
-	  movements/rr.c \
-	  movements/rra.c \
-	  movements/rrb.c \
-	  movements/rrr.c \
-	  movements/sa.c \
-	  movements/sb.c \
-	  push_swap.c
+SRCS = utils/ft_atoi.c \
+       utils/ft_isdigit.c \
+       utils/ft_calloc.c \
+       utils/ft_bzero.c \
+       utils/ft_split.c \
+       utils/ft_strdup.c \
+       utils/ft_strjoin.c \
+       utils/ft_strlcpy.c \
+       utils/ft_strlen.c \
+       utils/ft_strncmp.c \
+       utils/ft_substr.c \
+       utils/errors.c \
+       utils/validate_inputs.c \
+       utils/stack_utils.c \
+       moves/sa.c \
+       moves/pb.c \
+       moves/pa.c \
+       moves/rrr.c \
+       moves/rrb.c \
+       moves/rra.c \
+       moves/rr.c \
+       moves/rb.c \
+       moves/ra.c \
+          sortings/get_big_small.c\
+	   sortings/sorting.c \
+	   sortings/sorting_utils.c \
+	   sortings/sorting_utils2.c \
+	   sortings/push_cheapest.c \
+	   sortings/check_cheapest.c \
+	   sortings/targets.c \
+       push_swap.c
 
-OBJ = $(SRC:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 INCLUDES = push_swap.h
 
 all: $(NAME)
 	@echo "ok"
 
-$(NAME) : $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.c $(INCLUDES)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -f $(OBJ)
-	@echo "clean done"
+	@$(RM) $(OBJS)
+	@echo "cleaned"
 
 fclean: clean
-	@rm -f $(NAME)
-	@echo "full clean done"
+	@$(RM) $(NAME)
+	@echo "fully cleaned"
 
 re: fclean all
 
-.PHONY: clean fclean all re
-
-# OBJS = $(SRCS:.c=.o)
-
-# INCLUDES = push_swap.h
-
-# all: $(NAME)
-# 	@echo "ok"
-
-# $(NAME): $(OBJS)
-# 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-
-# %.o: %.c $(INCLUDES)
-# 	@$(CC) $(CFLAGS) -c $< -o $@
-
-# clean:
-# 	@$(RM) $(OBJS)
-# 	@echo "cleaned"
-
-# fclean: clean
-# 	@$(RM) $(NAME)
-# 	@echo "fully cleaned"
-
-# re: fclean all
-
-# .PHONY: all clean fclean re
+.PHONY: all clean fclean re

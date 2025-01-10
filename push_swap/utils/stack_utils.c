@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_utlis.c                                      :+:      :+:    :+:   */
+/*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-23 11:28:04 by cgil              #+#    #+#             */
-/*   Updated: 2024-12-23 11:28:04 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:16:29 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/10 12:22:25 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 t_node	*new_node(int value)
 {
@@ -19,7 +19,7 @@ t_node	*new_node(int value)
 	node = malloc(sizeof(t_node));
 	if (!node)
 		return (NULL);
-	node->value = value;
+	node->val = value;
 	node->next = NULL;
 	node->prev = NULL;
 	return (node);
@@ -29,7 +29,7 @@ t_stack	*create_stack(void)
 {
 	t_stack	*stack;
 
-	stack = malloc(sizeof(stack));
+	stack = malloc(sizeof(t_stack));
 	if (!stack)
 		return (NULL);
 	stack->top = NULL;
@@ -68,14 +68,14 @@ void	init_stack(int ac, char *av[], t_stack *stack)
 	{
 		nums = ft_split(av[1], ' ');
 		i = 0;
-		while (nums[i])
+		while (nums && nums[i])
 			i++;
 		while (i > 0)
 		{
 			i--;
 			push_stack(stack, ft_atoi(nums[i]));
 		}
-		free_split(i, nums);
+		free_split(nums);
 	}
 	else
 	{

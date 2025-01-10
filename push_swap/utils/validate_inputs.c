@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   validate_inputs.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-19 13:01:51 by cgil              #+#    #+#             */
-/*   Updated: 2024-12-19 13:01:51 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:17:03 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:44:20 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	int_range(char *str)
 {
@@ -77,12 +77,12 @@ int	only_input(char *str)
 	{
 		if (!is_numeric_input(nums[i]) || !int_range(nums[i]))
 		{
-			free_split(i, nums);
+			free_split(nums);
 			return (0);
 		}
 		i++;
 	}
-	free_split(i, nums);
+	free_split(nums);
 	return (1);
 }
 

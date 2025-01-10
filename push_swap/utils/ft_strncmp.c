@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 19:10:12 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/24 16:56:21 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:14:48 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:08:35 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 18:00:21 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/24 15:29:09 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:14:08 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:06:37 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 size_t	ft_strlen(const char *str)
 {

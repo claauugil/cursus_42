@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 14:25:04 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/24 15:20:30 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:10:38 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:07:35 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-int	ft_isdigit(int n)
+int	ft_isdigit(int c)
 {
-	if (n >= '0' && n <= '9')
-	{
+	if (c >= '0' && c <= '9')
 		return (1);
-	}
 	return (0);
 }

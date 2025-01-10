@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 18:45:23 by cgil              #+#    #+#             */
-/*   Updated: 2024/10/09 13:44:29 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:11:59 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:10:37 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 char	*ft_strdup(const char *s)
 {

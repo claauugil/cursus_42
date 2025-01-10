@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 11:10:08 by cgil              #+#    #+#             */
-/*   Updated: 2024/10/07 11:55:43 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:09:54 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:06:53 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

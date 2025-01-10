@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 11:36:20 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 12:12:57 by claudia          ###   ########.fr       */
+/*   Created: 2025/01/09 17:19:49 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/10 13:03:05 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	ft_abs(int n)
 {
@@ -33,7 +33,7 @@ int	get_combined_moves(t_stack *from, t_stack *to, int value)
 	int	target_depth;
 
 	f_depth = get_depth(from, value);
-	target = get_target(to, value, 1);
+	target = get_target(to, value);
 	target_depth = get_depth(to, target);
 	return (calculate_combined_moves(f_depth, target_depth));
 }
@@ -61,9 +61,9 @@ int	check_cheapest(t_stack *from, t_stack *to)
 	cheapest_val = INT_MIN;
 	while (actual)
 	{
-		combined_moves = get_combined_moves(from, to, actual->value);
+		combined_moves = get_combined_moves(from, to, actual->val);
 		update_cheapest(&actual_moves, combined_moves, &cheapest_val,
-			actual->value);
+			actual->val);
 		actual = actual->next;
 	}
 	return (cheapest_val);

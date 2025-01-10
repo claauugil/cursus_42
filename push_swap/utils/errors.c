@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 11:40:18 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 16:04:31 by claudia          ###   ########.fr       */
+/*   Created: 2025/01/09 17:07:44 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/10 12:54:22 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	search_dups(t_stack *stack)
 {
@@ -23,7 +23,7 @@ int	search_dups(t_stack *stack)
 		inner = current->next;
 		while (inner != NULL)
 		{
-			if (current->value == inner->value)
+			if (current->val == inner->val)
 				return (1);
 			inner = inner->next;
 		}
@@ -46,37 +46,12 @@ int	empty_string(char *str)
 	return (1);
 }
 
-void	print_error(void)
+void	print_error_exit(t_stack *stack_a, t_stack *stack_b)
 {
+	if (stack_a)
+		free(stack_a);
+	if (stack_a)
+		free(stack_b);
 	write(2, "Error\n", 6);
 	exit(1);
 }
-
-/*void	print_stacks(t_stack *stack_a, t_stack *stack_b)
-{
-	t_node	*current_a;
-	t_node	*current_b;
-
-	current_a = stack_a ? stack_a->top : NULL;
-	current_b = stack_b ? stack_b->top : NULL;
-	printf("Stack A (top to bottom)\tStack B (top to bottom)\n");
-	printf("-------------------------------------------------\n");
-	while (current_a || current_b)
-	{
-		if (current_a)
-		{
-			printf("%-20d", current_a->value);
-			current_a = current_a->next;
-		}
-		else
-		{
-			printf("%-20s", " ");
-		}
-		if (current_b)
-		{
-			printf("%d", current_b->value);
-			current_b = current_b->next;
-		}
-		printf("\n");
-	}
-}*/

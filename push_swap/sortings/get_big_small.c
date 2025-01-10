@@ -5,12 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/30 12:09:49 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 11:09:08 by claudia          ###   ########.fr       */
+/*   Created: 2025/01/09 17:20:59 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 17:59:02 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
+
+int	max(int a, int b)
+{
+	if (a > b)
+	{
+		return (a);
+	}
+	return (b);
+}
 
 int	is_biggest(t_stack *in_stack, int n)
 {
@@ -21,7 +30,7 @@ int	is_biggest(t_stack *in_stack, int n)
 	actual = in_stack->top;
 	while (actual)
 	{
-		if (n < actual->value)
+		if (n < actual->val)
 			return (0);
 		actual = actual->next;
 	}
@@ -37,7 +46,7 @@ int	is_smallest(t_stack *in_stack, int n)
 	actual = in_stack->top;
 	while (actual)
 	{
-		if (n > actual->value)
+		if (n > actual->val)
 			return (0);
 		actual = actual->next;
 	}
@@ -52,11 +61,11 @@ int	find_biggest(t_stack *to_find)
 	if (!to_find->top)
 		return (INT_MIN);
 	actual = to_find->top;
-	max = actual->value;
+	max = actual->val;
 	while (actual)
 	{
-		if (max < actual->value)
-			max = actual->value;
+		if (max < actual->val)
+			max = actual->val;
 		actual = actual->next;
 	}
 	return (max);
@@ -70,19 +79,12 @@ int	find_smallest(t_stack *to_find)
 	if (!to_find->top)
 		return (INT_MIN);
 	actual = to_find->top;
-	min = actual->value;
+	min = actual->val;
 	while (actual)
 	{
-		if (min > actual->value)
-			min = actual->value;
+		if (min > actual->val)
+			min = actual->val;
 		actual = actual->next;
 	}
 	return (min);
-}
-
-int	max(int a, int b)
-{
-	if (a < b)
-		return (a);
-	return (b);
 }

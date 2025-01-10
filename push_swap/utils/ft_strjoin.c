@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 16:01:38 by cgil              #+#    #+#             */
-/*   Updated: 2024/09/27 15:36:21 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:12:57 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:06:30 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

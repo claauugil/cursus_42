@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rb.c                                               :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 17:13:14 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/08 16:24:54 by claudia          ###   ########.fr       */
+/*   Created: 2025/01/09 17:26:19 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:10:20 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	rb(t_stack *b)
+void	pb(t_stack *a, t_stack *b)
 {
 	t_node	*node;
 
-	if (!b->top || b->top == b->bottom)
+	if (a->top == NULL)
 		return ;
-	node = b->top;
-	b->top = node->next;
-	b->top->prev = NULL;
-	b->bottom->next = node;
-	node->prev = b->bottom;
-	node->next = NULL;
-	b->bottom = node;
-	write(1, "rb\n", 3);
+	node = a ->top;
+	a->top = node->next;
+	if (a->top != NULL)
+		a->top->prev = NULL;
+	else
+		a->bottom = NULL;
+	node->next = b->top;
+	if (b->top != NULL)
+		b->top->prev = node;
+	else
+		b->bottom = node;
+	b->top = node;
+	node->prev = NULL;
+	b->size++;
+	a->size--;
+	write(1, "pb\n", 3);
 }

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sb.c                                               :+:      :+:    :+:   */
+/*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-27 12:16:17 by cgil              #+#    #+#             */
-/*   Updated: 2024-12-27 12:16:17 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:31:43 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:08:19 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	sb(t_stack *b)
+void	sa(t_stack *a)
 {
 	t_node	*first;
 	t_node	*second;
 
-	if (!b->top || b->top == b->bottom)
+	if (!a->top || a->top == a->bottom)
 		return ;
-	first = b->top;
+	first = a->top;
 	second = first->next;
 	first->next = second->next;
 	if (second->next)
 		second->next->prev = first;
 	second->prev = NULL;
 	second->next = first;
-	b->top = second;
+	a->top = second;
 	first->prev = second;
-	write(1, "sb\n", 3);
+	write(1, "sa\n", 3);
 }

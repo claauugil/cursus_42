@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           +#+  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 09:59:06 by cgil              #+#    #+#             */
-/*   Updated: 2024/10/04 12:02:40 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/09 17:15:45 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:07:22 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

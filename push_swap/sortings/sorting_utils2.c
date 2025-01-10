@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/28 12:26:17 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 16:14:07 by claudia          ###   ########.fr       */
+/*   Created: 2025/01/09 17:22:52 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:05:44 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	largest_at_top(t_stack *a)
 {
-	if (a->top->next->value < a->top->next->next->value)
+	if (a->top->next->val < a->top->next->next->val)
 		ra(a);
 	else
 	{
@@ -35,9 +35,9 @@ void	sort_three(t_stack *a)
 	int	second;
 	int	third;
 
-	first = a->top->value;
-	second = a->top->next->value;
-	third = a->top->next->next->value;
+	first = a->top->val;
+	second = a->top->next->val;
+	third = a->top->next->next->val;
 	if (first < second && second < third)
 		return ;
 	if (first > second && second < third && first < third)

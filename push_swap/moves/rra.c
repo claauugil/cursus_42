@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/23 16:21:25 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 16:25:19 by claudia          ###   ########.fr       */
+/*   Created: 2025/01/09 17:29:16 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:06:02 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	pa(t_stack *a, t_stack *b)
+void	rra(t_stack *a)
 {
 	t_node	*node;
 
-	if (b->top == NULL)
+	if (!a->top || a->top == a->bottom)
 		return ;
-	node = b->top;
-	b->top = node->next;
-	if (b->top != NULL)
-		b->top->prev = NULL;
-	else
-		b->bottom = NULL;
-	node->next = a->top;
-	if (a->top != NULL)
-		a->top->prev = node;
-	else
-		a->bottom = node;
-	a->top = node;
+	node = a->bottom;
+	a->bottom = node->prev;
+	a->bottom->next = NULL;
 	node->prev = NULL;
-	a->size++;
-	b->size--;
-	write(1, "pa\n", 3);
+	node->next = a->top;
+	a->top->prev = node;
+	a->top = node;
+	write(1, "rra\n", 4);
 }
-

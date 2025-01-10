@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra.c                                              :+:      :+:    :+:   */
+/*   rb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 17:56:17 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/08 16:24:36 by claudia          ###   ########.fr       */
+/*   Created: 2025/01/09 17:28:18 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 18:08:02 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	rra(t_stack *a)
+void	rb(t_stack *b)
 {
 	t_node	*node;
 
-	if (!a->top || a->top == a->bottom)
+	if (!b->top || b->top == b->bottom)
 		return ;
-	node = a->bottom;
-	a->bottom = node->prev;
-	a->bottom->next = NULL;
-	node->prev = NULL;
-	node->next = a->top;
-	a->top->prev = node;
-	a->top = node;
-	write(1, "rra\n", 4);
+	node = b->top;
+	b->top = node->next;
+	b->top->prev = NULL;
+	b->bottom->next = node;
+	node->prev = b->bottom;
+	node->next = NULL;
+	b->bottom = node;
+	write(1, "rb\n", 3);
 }

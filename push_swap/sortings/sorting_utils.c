@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/27 15:22:10 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/08 16:08:43 by claudia          ###   ########.fr       */
+/*   Created: 2025/01/09 17:22:15 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/09 17:57:22 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	get_depth(t_stack *in_stack, int val)
 {
@@ -21,7 +21,7 @@ int	get_depth(t_stack *in_stack, int val)
 	actual = in_stack->top;
 	while (actual)
 	{
-		if (actual->value == val)
+		if (actual->val == val)
 		{
 			if (i <= in_stack->size / 2)
 				return (i);
@@ -68,7 +68,7 @@ void	sort_two(t_stack *stack)
 {
 	if (!stack || !stack->top || !stack->top->next)
 		return ;
-	if (stack->top->value > stack->top->next->value)
+	if (stack->top->val > stack->top->next->val)
 		sa(stack);
 }
 
@@ -81,7 +81,7 @@ int	is_sorted(t_stack *stack)
 	actual = stack->top;
 	while (actual && actual->next)
 	{
-		if (actual->value > actual->next->value)
+		if (actual->val > actual->next->val)
 			return (0);
 		actual = actual->next;
 	}
