@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fract_ol.h                                         :+:      :+:    :+:   */
+/*   str_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-13 15:46:05 by cgil              #+#    #+#             */
-/*   Updated: 2025-01-13 15:46:05 by cgil             ###   ########.fr       */
+/*   Created: 2025-01-14 14:11:06 by cgil              #+#    #+#             */
+/*   Updated: 2025-01-14 14:11:06 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACT_OL_H
-# define FRACT_OL_H
+#include "fractol.h"
 
-# include <stdio.h>
-
-typedef	struct s_complex_n
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	double	real;
-	double	ima;
-}				t_complex_n;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-#endif
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	if (str1 == NULL || str2 == NULL || n <= 0)
+		return (0);
+	i = 0;
+	while (i < n && s1[i] != '\0' && s2[i] != '\0')
+	{
+		i++;
+	}
+	return (s1[i] -s2[i]);
+}
 
