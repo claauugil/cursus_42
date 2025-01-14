@@ -43,7 +43,7 @@ int	main() // check if number is in the plane
 		z.real = temp_real;
 
 		// add c
-		z.real += c.real;
+		z.real += c.real; 
 		z.ima += c.ima;
 		printf("iteration n -> %d real %f ima %f\n", i, z.real, z.ima);
 		i++;
