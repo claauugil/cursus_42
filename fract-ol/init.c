@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol_utils.c                                    :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-14 16:54:27 by cgil              #+#    #+#             */
-/*   Updated: 2025-01-14 16:54:27 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/14 16:54:27 by cgil              #+#    #+#             */
+/*   Updated: 2025/01/15 18:30:35 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
+void	data_init(t_fractal *fractal)
+{
+	fractal->scape_value = 4;
+}
+
 void	fractal_init(t_fractal *fractal)
 {
-	//MLX
 	fractal->mlx_connection = mlx_init();
 	if (fractal->mlx_connection == NULL)
 		malloc_error();
@@ -35,4 +39,7 @@ void	fractal_init(t_fractal *fractal)
 		free(fractal->mlx_connection);
 		malloc_error();
 	}
+	fractal->img.pixels_ptr = mlx_get_data_addr(fractal->img.img_ptr,
+			&fractal->img.bpp, &fractal->img.line_len, &fractal->img.endian);
+	data_init(fractal);
 }

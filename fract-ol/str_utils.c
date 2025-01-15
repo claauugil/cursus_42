@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   str_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-14 14:11:06 by cgil              #+#    #+#             */
-/*   Updated: 2025-01-14 14:11:06 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/14 14:11:06 by cgil              #+#    #+#             */
+/*   Updated: 2025/01/15 18:41:59 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		i++;
 	}
-	return (s1[i] -s2[i]);
+	return (s1[i] - s2[i]);
 }
-

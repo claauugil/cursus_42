@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mlx_destroy_display.c                              :+:      :+:    :+:   */
+/*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/03 18:56:35 by mg                #+#    #+#             */
-/*   Updated: 2020/10/04 01:55:35 by mg               ###   ########.fr       */
+/*   Created: 2025/01/15 12:48:16 by claudia           #+#    #+#             */
+/*   Updated: 2025/01/15 18:34:19 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mlx_int.h"
+#include "fractol.h"
 
-int	mlx_destroy_display(t_xvar *xvar)
+void	print_error(void)
 {
-	XCloseDisplay(xvar->display);
+	write(2, "check correct arguments to run the program", 43);
+	exit(EXIT_FAILURE);
+}
+
+void	malloc_error(void)
+{
+	perror("Error while allocating memory with malloc");
+	exit(EXIT_FAILURE);
 }
