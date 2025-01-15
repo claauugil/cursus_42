@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:46:05 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/15 18:21:44 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/15 19:16:00 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct s_fractal
 	t_image	img;
 	//add hooks members variable
 	double	scape_value;
+	int		iterations_def; //value tied to image quality
 }		t_fractal;
 
 typedef struct s_complex_n

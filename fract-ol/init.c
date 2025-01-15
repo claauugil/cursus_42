@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 16:54:27 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/15 18:30:35 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/15 19:16:24 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	data_init(t_fractal *fractal)
 {
 	fractal->scape_value = 4;
+	fractal->iterations_def = 42;
 }
 
 void	fractal_init(t_fractal *fractal)
