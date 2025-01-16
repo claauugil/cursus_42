@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 14:28:51 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/15 19:18:31 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/16 16:32:27 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,16 @@
 
 // busca todos los pixels y chequea si estan en el mandelbrot set
 
+static void	my_pixel_put()
+{
+	
+}
 void	handle_pixel(int x, int y, t_fractal *fractal)
 {
 	t_complex_n	z;
 	t_complex_n	c;
 	int			i;
+	int			color;
 
 	i = 0;
 	z.x = 0.0;
@@ -34,6 +39,7 @@ void	handle_pixel(int x, int y, t_fractal *fractal)
 		z = sum_complex(square_complex(z), c);
 		if ((z.x * z.x) + (z.y * z.y) > fractal->scape_value) // the value scaped 
 		{
+			color = map(i, BLACK, WHITE, 0, fractal->iterations_def); // kmk
 			my_pixel_put();
 			return ;
 		}

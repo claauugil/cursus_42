@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:46:05 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/15 19:16:00 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/16 16:22:08 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,15 @@
 
 # define WIDTH	800
 # define HEIGHT	800
+
+#ifndef COLORS_H
+#define COLORS_H
+
+// Colores en formato 0xRRGGBB
+#define WHITE 0xFFFFFF
+#define BLACK 0x000000
+
+#endif // COLORS_H
 
 typedef struct s_image
 {
