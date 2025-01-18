@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 16:54:27 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/17 19:09:14 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/18 18:36:43 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static void	data_init(t_fractal *fractal)
 {
 	fractal->scape_value = 4;
 	fractal->iterations_def = 42;
+	fractal->shift_x = 0.0;
+	fractal->shift_y = 0.0;
 }
 
 static void	events_init(t_fractal *fractal)
@@ -25,11 +27,11 @@ static void	events_init(t_fractal *fractal)
 			 KeyPressMask,
 			 key_handler,
 			 fractal);
-	mlx_hook(fractal->mlx_new_window,
+	/*mlx_hook(fractal->mlx_new_window,
 			 ButtonPress,
 			 ButtonPressMask,
 			 mouse_handler,
-			 fractal);
+			 fractal);*/
 	mlx_hook(fractal->mlx_new_window,
 			 DestroyNotify,
 			 StructureNotifyMask,
@@ -44,7 +46,7 @@ void	fractal_init(t_fractal *fractal)
 		malloc_error();
 	fractal->mlx_new_window = mlx_new_window(fractal->mlx_connection,
 			WIDTH, HEIGHT, fractal->name);
-	if (mlx_new_window == NULL)
+	if (fractal->mlx_new_window == NULL)
 	{
 		mlx_destroy_display(fractal->mlx_connection);
 		free(fractal->mlx_connection);
@@ -61,6 +63,6 @@ void	fractal_init(t_fractal *fractal)
 	}
 	fractal->img.pixels_ptr = mlx_get_data_addr(fractal->img.img_ptr,
 			&fractal->img.bpp, &fractal->img.line_len, &fractal->img.endian);
-	data_init(fractal);
 	events_init(fractal);
+	data_init(fractal);
 }

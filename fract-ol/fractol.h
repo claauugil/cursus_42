@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:46:05 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/17 18:39:23 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/18 18:24:56 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <math.h>
+# include <X11/X.h>
+# include <X11/keysym.h>
 # include "minilibx-linux/mlx.h"
 
 # define WIDTH	800
@@ -52,6 +54,8 @@ typedef struct s_fractal
 	//add hooks members variable
 	double	scape_value;
 	int		iterations_def; //value tied to image quality
+	double	shift_x;
+	double	shift_y;
 }		t_fractal;
 
 typedef struct s_complex_n
@@ -63,12 +67,13 @@ typedef struct s_complex_n
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 void		print_error(void);
 void		malloc_error(void);
-void		data_init(t_fractal *fractal);
 void		fractal_init(t_fractal *fractal);
 double		mapping(double unscaled_num, double new_min,
 				double new_max, double old_min, double old_max);
 void		fractal_render(t_fractal *fractal);
 t_complex_n	sum_complex(t_complex_n z1, t_complex_n z2);
 t_complex_n	square_complex(t_complex_n z);
+int 		key_handler(int keysym, t_fractal *fractal);
+int			close_handler(t_fractal *fractal);
 
 #endif

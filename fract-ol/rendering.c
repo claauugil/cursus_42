@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 14:28:51 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/17 18:39:29 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/18 17:17:16 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ static void	handle_pixel(int x, int y, t_fractal *fractal)
 	z.x = 0.0;
 	z.y = 0.0;
     //pixel coordinates scaled
-	c.x = mapping(x, -2, +2, 0, WIDTH);
-	c.y = mapping(y, +2, -2, 0, HEIGHT);
+	/*?*/c.x = mapping(x, -2, +2, 0, WIDTH) + fractal->shift_x;
+	c.y = mapping(y, +2, -2, 0, HEIGHT) + fractal->shift_y;
     // how many times to iterate z² + c  to see if the 
         //point scaped
 	while (i < fractal->iterations_def)
