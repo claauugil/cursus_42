@@ -12,28 +12,28 @@
 
 #include "fractol.h"
 
-void	data_init(t_fractal *fractal)
+static void	data_init(t_fractal *fractal)
 {
 	fractal->scape_value = 4;
 	fractal->iterations_def = 42;
 }
 
-void	events_init(t_fractal *fractal)
+static void	events_init(t_fractal *fractal)
 {
 	mlx_hook(fractal->mlx_new_window,
-			 KeyPress, 
-			 KeyPressMask, 
-			 key_handler, 
+			 KeyPress,
+			 KeyPressMask,
+			 key_handler,
 			 fractal);
 	mlx_hook(fractal->mlx_new_window,
-			 ButtonPress, 
-			 ButtonPressMask, 
-			 mouse_handler, 
+			 ButtonPress,
+			 ButtonPressMask,
+			 mouse_handler,
 			 fractal);
 	mlx_hook(fractal->mlx_new_window,
-			 DestroyNotify, 
-			 StructureNotifyMask, 
-			 close_handler, 
+			 DestroyNotify,
+			 StructureNotifyMask,
+			 close_handler,
 			 fractal);
 }
 
@@ -61,6 +61,6 @@ void	fractal_init(t_fractal *fractal)
 	}
 	fractal->img.pixels_ptr = mlx_get_data_addr(fractal->img.img_ptr,
 			&fractal->img.bpp, &fractal->img.line_len, &fractal->img.endian);
-	events_init(fractal);
 	data_init(fractal);
+	events_init(fractal);
 }
