@@ -6,14 +6,14 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 14:56:47 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/15 18:37:20 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/17 18:23:00 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-double	maping(double unscaled_num, double new_min, double new_max,
-	double old_max)
+double		mapping(double unscaled_num, double new_min,
+				double new_max, double old_min, double old_max)
 {
 	return ((new_max - new_min) * (unscaled_num - 0) / (old_max - 0) + new_min);
 }

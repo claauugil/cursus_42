@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 12:17:06 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/15 18:23:02 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/17 17:51:26 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int ac, char *av[])
 	{
 		fractal.name = av[1];
 		fractal_init(&fractal);
-		//fractal_render(&fractal);
+		fractal_render(&fractal);
 		mlx_loop(fractal.mlx_connection);
 	}
 	else

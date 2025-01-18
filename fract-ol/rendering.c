@@ -6,19 +6,25 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 14:28:51 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/16 16:32:27 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/17 18:39:29 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-// busca todos los pixels y chequea si estan en el mandelbrot set
+// pone un pixel en el buffer de imagenes
 
-static void	my_pixel_put()
+static void	my_pixel_put(int x, int y, t_image *img, int color)
 {
-	
+	int	offset;
+
+	offset = (y * img->line_len) + (x * (img->bpp / 8));
+	*(unsigned int *)(img->pixels_ptr + offset) = color;
 }
-void	handle_pixel(int x, int y, t_fractal *fractal)
+//asigna un color a cada pixel dependiendo de las iteraciones
+// que haga y si llega al scape value
+
+static void	handle_pixel(int x, int y, t_fractal *fractal)
 {
 	t_complex_n	z;
 	t_complex_n	c;
@@ -29,8 +35,8 @@ void	handle_pixel(int x, int y, t_fractal *fractal)
 	z.x = 0.0;
 	z.y = 0.0;
     //pixel coordinates scaled
-	c.x = maping(x, -2, +2, WIDTH);
-	c.y = maping(y, +2, -2, HEIGHT);
+	c.x = mapping(x, -2, +2, 0, WIDTH);
+	c.y = mapping(y, +2, -2, 0, HEIGHT);
     // how many times to iterate z² + c  to see if the 
         //point scaped
 	while (i < fractal->iterations_def)
@@ -39,13 +45,16 @@ void	handle_pixel(int x, int y, t_fractal *fractal)
 		z = sum_complex(square_complex(z), c);
 		if ((z.x * z.x) + (z.y * z.y) > fractal->scape_value) // the value scaped 
 		{
-			color = map(i, BLACK, WHITE, 0, fractal->iterations_def); // kmk
-			my_pixel_put();
+			color = mapping(i, BLACK, WHITE, 0, fractal->iterations_def); // kmk
+			my_pixel_put(x, y, &fractal->img, color);
 			return ;
 		}
+		i++;
 	}
+	// si esta dentro del plano mandelbrot 
+	my_pixel_put(x, y, &fractal->img, DARK_PINK);
 }
-
+// recorre todos los pixeles de una ventana y calcula el color correspondiente
 void	fractal_render(t_fractal *fractal)
 {
 	int	x;
@@ -60,4 +69,5 @@ void	fractal_render(t_fractal *fractal)
 			handle_pixel(x, y, fractal);
 		}
 	}
+	mlx_put_image_to_window(fractal->mlx_connection,fractal->mlx_new_window, fractal->img.img_ptr, 0, 0);
 }

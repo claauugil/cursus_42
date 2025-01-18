@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:46:05 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/16 16:22:08 by claudia          ###   ########.fr       */
+/*   Updated: 2025/01/17 18:39:23 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@
 // Colores en formato 0xRRGGBB
 #define WHITE 0xFFFFFF
 #define BLACK 0x000000
+#define ORANGE 0xFFA500f
+#define PINK  0xFFB6C1
+#define DARK_PINK  0xC71585
 
 #endif // COLORS_H
 
@@ -60,9 +63,10 @@ typedef struct s_complex_n
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 void		print_error(void);
 void		malloc_error(void);
+void		data_init(t_fractal *fractal);
 void		fractal_init(t_fractal *fractal);
-double		maping(double unscaled_num, double new_min,
-				double new_max, double old_max);
+double		mapping(double unscaled_num, double new_min,
+				double new_max, double old_min, double old_max);
 void		fractal_render(t_fractal *fractal);
 t_complex_n	sum_complex(t_complex_n z1, t_complex_n z2);
 t_complex_n	square_complex(t_complex_n z);
