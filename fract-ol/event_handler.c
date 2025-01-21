@@ -13,7 +13,7 @@
 #include "fractol.h"
 
 //ESC o x en pantalla
-int   close_handler(t_fractal *fractal)
+int close_handler(t_fractal *fractal)
 {
     mlx_destroy_image(fractal->mlx_connection, fractal->img.img_ptr);
     mlx_destroy_window(fractal->mlx_connection, fractal->mlx_new_window);
@@ -21,6 +21,7 @@ int   close_handler(t_fractal *fractal)
     free(fractal->mlx_connection);
     exit(EXIT_SUCCESS);
 }
+
 int key_handler(int keysym, t_fractal *fractal)
 {
     if (keysym == XK_Escape)
@@ -43,12 +44,21 @@ int key_handler(int keysym, t_fractal *fractal)
 
 int mouse_handler(int button, int x, int y, t_fractal *fractal)
 {
-    //zoom in
     if (button == Button4)
         fractal->zoom *= 0.95;
-    //zoom out
     else if (button == Button5)
         fractal->zoom *= 1.05;
     fractal_render(fractal);
+    return (0);
+}
+
+int tracking_julia(int x, int y, t_fractal *fractal)
+{
+    if (!ft_strncmp(fractal->name, "julia", 5))
+    {
+        fractal->julia_x = (mapping (x, -2, +2, 0, WIDTH) * fractal->zoom) + fractal->shift_x;
+        fractal->julia_y = (mapping (x, +2, -2, 0, HEIGHT) * fractal->zoom) + fractal->shift_y;
+        fractal_render(fractal);
+    }
     return (0);
 }

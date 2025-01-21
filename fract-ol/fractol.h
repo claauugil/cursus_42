@@ -85,6 +85,7 @@ int 		key_handler(int keysym, t_fractal *fractal);
 int			close_handler(t_fractal *fractal);
 int 		mouse_handler(int button, int x, int y, t_fractal *fractal);
 double		ft_atodbl(char *s);
+int			tracking_julia(int x, int y, t_fractal *fractal);
 
 
 #endif
