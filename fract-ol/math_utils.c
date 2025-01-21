@@ -13,7 +13,7 @@
 #include "fractol.h"
 
 double	mapping(double unscaled_num, double new_min,
-				double new_max, double old_min, double old_max)
+				double new_max, double old_max)
 {
 	return ((new_max - new_min) * (unscaled_num - 0) / (old_max - 0) + new_min);
 }

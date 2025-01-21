@@ -24,14 +24,9 @@
 # define WIDTH	800
 # define HEIGHT	800
 
-# ifndef COLORS_H
-# define COLORS_H
-
-#define DARK_PINK  0xC71585
-#define YELLOW 0xFFF078
-#define PURPLE 0x6528F7
-
-#endif // COLORS_H
+# define DARK_PINK  0xC71585
+# define YELLOW 0xFFF078
+# define PURPLE 0x6528F7
 
 typedef struct s_image
 {
@@ -68,7 +63,7 @@ void		print_error(void);
 void		malloc_error(void);
 void		fractal_init(t_fractal *fractal);
 double		mapping(double unscaled_num, double new_min,
-				double new_max, double old_min, double old_max);
+				double new_max, double old_max);
 void		fractal_render(t_fractal *fractal);
 t_complex_n	sum_complex(t_complex_n z1, t_complex_n z2);
 t_complex_n	square_complex(t_complex_n z);

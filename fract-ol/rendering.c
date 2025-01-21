@@ -42,15 +42,15 @@ static void	handle_pixel(int x, int y, t_fractal *fractal)
 	int			color;
 
 	i = 0;
-	z.x = (mapping(x, -2, +2, 0, WIDTH) * fractal->zoom) + fractal->shift_x;
-	z.y = (mapping(y, +2, -2, 0, HEIGHT) * fractal->zoom) + fractal->shift_y;
+	z.x = (mapping(x, -2, +2, WIDTH) * fractal->zoom) + fractal->shift_x;
+	z.y = (mapping(y, +2, -2, HEIGHT) * fractal->zoom) + fractal->shift_y;
 	mandel_julia(&z, &c, fractal);
 	while (i < fractal->iterations_def)
 	{
 		z = sum_complex(square_complex(z), c);
 		if ((z.x * z.x) + (z.y * z.y) > fractal->scape_value)
 		{
-			color = mapping(i, DARK_PINK, YELLOW, 0, fractal->iterations_def);
+			color = mapping(i, DARK_PINK, YELLOW, fractal->iterations_def);
 			my_pixel_put(x, y, &fractal->img, color);
 			return ;
 		}
