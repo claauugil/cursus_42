@@ -29,33 +29,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (s1[i] - s2[i]);
 }
-/*double	ft_atodbl(char *s)
-{
-	long	int_part;
-	double	fractional_part;
-	double	pow;
-	int		sign;
 
-	int_part = 0;
-	fractional_part = 0;
-	sign = +1;
-	pow = 1;
-	while ((*s >= 9 && *s <= 13) || *s == 32)
-		++s;
-	while (*s == '+' || *s == '-')
-		if (*s == '-')
-			sign = -1;
-	while (*s != '.' && *s)
-		int_part = (int_part * 10) + (*s++ - 48);
-	if (*s == '.')
-		++s;
-	while (*s)
-	{
-		pow /= 10;
-		fractional_part = fractional_part + (*s++ - 48) *  pow;
-	}
-	return ((int_part + fractional_part) * sign);
-}*/
 double	ft_atodbl(char *s)
 {
 	long	integer_part;
@@ -67,14 +41,14 @@ double	ft_atodbl(char *s)
 	fractional_part = 0;
 	sign = +1;
 	pow = 1;
-	while ((*s >= 9 && *s <= 13) || 32 == *s)
+	while ((*s >= 9 && *s <= 13) || *s == 32)
 		++s;
-	while ('+' == *s || '-' == *s)
-		if ('-' == *s++)
+	while (*s == '+' || *s == '-')
+		if (*s++ == '-')
 			sign = -sign;
 	while (*s != '.' && *s)
 		integer_part = (integer_part * 10) + (*s++ - 48);
-	if ('.' == *s)
+	if (*s == '.')
 		++s;
 	while (*s)
 	{

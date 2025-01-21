@@ -12,8 +12,6 @@
 
 #include "fractol.h"
 
-// pone un pixel en el buffer de imagenes
-
 static void	my_pixel_put(int x, int y, t_image *img, int color)
 {
 	int	offset;
@@ -21,8 +19,6 @@ static void	my_pixel_put(int x, int y, t_image *img, int color)
 	offset = (y * img->line_len) + (x * (img->bpp / 8));
 	*(unsigned int *)(img->pixels_ptr + offset) = color;
 }
-//asigna un color a cada pixel dependiendo de las iteraciones
-// que haga y si llega al scape value
 
 static void	mandel_julia(t_complex_n *z, t_complex_n *c, t_fractal *fractal)
 {
@@ -37,38 +33,7 @@ static void	mandel_julia(t_complex_n *z, t_complex_n *c, t_fractal *fractal)
 		c->y = z->y;
 	}
 }
-/*static void	handle_pixel(int x, int y, t_fractal *fractal)
-{
-	t_complex_n	z;
-	t_complex_n	c;
-	int			i;
-	int			color;
 
-	z.x = 0.0;
-	z.y = 0.0;
-	i = 0;
-    //pixel coordinates scaled
-	//scaling
-	c.x = (mapping(x, -2, +2, 0, WIDTH) * fractal->zoom) + fractal->shift_x;
-	c.y = (mapping(y, +2, -2, 0, HEIGHT) * fractal->zoom) + fractal->shift_y;
-    // how many times to iterate z² + c  to see if the
-        //point scaped
-	//mandel_julia(&z, &c, fractal);
-	while (i < fractal->iterations_def)
-	{
-        // z = z² + c
-		z = sum_complex(square_complex(z), c);
-		if ((z.x * z.x) + (z.y * z.y) > fractal->scape_value) // the value scaped
-		{
-			color = mapping(i, DARK_PINK, YELLOW, 0, fractal->iterations_def); // kmk
-			my_pixel_put(x, y, &fractal->img, color);
-			return ;
-		}
-		i++;
-	}
-	// si esta dentro del plano mandelbrot
-	my_pixel_put(x, y, &fractal->img, HOLA);
-}*/
 static void	handle_pixel(int x, int y, t_fractal *fractal)
 {
 	t_complex_n	z;
@@ -76,30 +41,24 @@ static void	handle_pixel(int x, int y, t_fractal *fractal)
 	int			i;
 	int			color;
 
-	//z.x = 0.0;
-	//z.y = 0.0;
 	i = 0;
-    //pixel coordinates scaled
-	//scaling
 	z.x = (mapping(x, -2, +2, 0, WIDTH) * fractal->zoom) + fractal->shift_x;
 	z.y = (mapping(y, +2, -2, 0, HEIGHT) * fractal->zoom) + fractal->shift_y;
 	mandel_julia(&z, &c, fractal);
 	while (i < fractal->iterations_def)
 	{
-        // z = z² + c
 		z = sum_complex(square_complex(z), c);
-		if ((z.x * z.x) + (z.y * z.y) > fractal->scape_value) // the value scaped
+		if ((z.x * z.x) + (z.y * z.y) > fractal->scape_value)
 		{
-			color = mapping(i, DARK_PINK, YELLOW, 0, fractal->iterations_def); // kmk
+			color = mapping(i, DARK_PINK, YELLOW, 0, fractal->iterations_def);
 			my_pixel_put(x, y, &fractal->img, color);
 			return ;
 		}
 		i++;
 	}
-	// si esta dentro del plano mandelbrot
-	my_pixel_put(x, y, &fractal->img, HOLA);
+	my_pixel_put(x, y, &fractal->img, PURPLE);
 }
-// recorre todos los pixeles de una ventana y calcula el color correspondiente
+
 void	fractal_render(t_fractal *fractal)
 {
 	int	x;
@@ -114,5 +73,6 @@ void	fractal_render(t_fractal *fractal)
 			handle_pixel(x, y, fractal);
 		}
 	}
-	mlx_put_image_to_window(fractal->mlx_connection,fractal->mlx_new_window, fractal->img.img_ptr, 0, 0);
+	mlx_put_image_to_window(fractal->mlx_connection, fractal->mlx_new_window,
+		fractal->img.img_ptr, 0, 0);
 }
