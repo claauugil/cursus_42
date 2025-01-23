@@ -47,7 +47,7 @@ double	ft_atodbl(char *s)
 		if (*s++ == '-')
 			sign = -sign;
 	while (*s != '.' && *s)
-		integer_part = (integer_part * 10) + (*s++ - 48);
+		integer_part = (integer_part * 10) + (*s++ - '0');
 	if (*s == '.')
 		++s;
 	while (*s)
