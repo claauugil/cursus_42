@@ -31,7 +31,7 @@ Implementación de una función en C que lee archivos línea por línea de forma
 ---
 
 ### 🎯 MILESTONE 02
-#### [Push_swap](https://github.com/loreeue/Push_swap) - 100
+#### [Push_swap](https://github.com/claauugil/push_swap)- 100
 
 El proyecto consiste en ordenar una pila de números utilizando un conjunto limitado de operaciones en dos pilas, optimizando el número de movimientos mediante algoritmos eficientes.
 
