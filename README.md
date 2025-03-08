@@ -31,13 +31,13 @@ Algoritmo para ordenar una pila de números utilizando un conjunto limitado de o
 #### [📌 Pipex](https://github.com/claauugil/Pipexx) - 🏆 100  
 Recreación del mecanismo de **pipes** en Linux, permitiendo la comunicación entre procesos mediante `fork`, `exec` y `dup2`, replicando el comportamiento de `|` en la terminal.  
 
-#### [📌 Fract-ol](https://github.com/loreeue/Fract-ol) - 🏆 100  
+#### [📌 Fract-ol](https://github.com/claauugil/Fractol) - 🏆 100  
 Generador de fractales interactivos como Mandelbrot y Julia utilizando **MiniLibX**. Permite realizar **zoom** y navegación en tiempo real.  
 
 ---
 
 ### 🎯 MILESTONE 03  
-#### [📌 Philosophers](https://github.com/loreeue/Philosophers) - 🏆 100  
+#### [📌 Philosophers](https://github.com/claauugil/philo) - 🏆 100  
 Simulación del clásico **problema de los filósofos comensales**, gestionando múltiples hilos con **mutexes** para evitar condiciones de carrera y **deadlocks** en un entorno de concurrencia.  
 
 ---
