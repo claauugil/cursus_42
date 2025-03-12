@@ -48,4 +48,4 @@ Simulación del clásico **problema de los filósofos comensales**, gestionando 
 ---
 
 ✨ **Contacto**   
-📧 [sofiagil2288@42madrid.com](mailto:claauugil@42madrid.com)  
+📧 [sofiagil2288@42madrid.com](mailto:sofiagil2288@gmail.com)  
