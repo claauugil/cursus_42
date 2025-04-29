@@ -28,7 +28,7 @@ Función en C que permite leer archivos **línea por línea** de manera eficient
 #### [📌 Push_swap](https://github.com/claauugil/push_swap) - 🏆 100  
 Algoritmo para ordenar una pila de números utilizando un conjunto limitado de operaciones. Se centra en optimizar el número de movimientos mediante estrategias eficientes.  
 
-#### [📌 Pipex](https://github.com/claauugil/Pipexx) - 🏆 100  
+#### [📌 Pipex](https://github.com/claauugil/Pipex) - 🏆 100  
 Recreación del mecanismo de **pipes** en Linux, permitiendo la comunicación entre procesos mediante `fork`, `exec` y `dup2`, replicando el comportamiento de `|` en la terminal.  
 
 #### [📌 Fract-ol](https://github.com/claauugil/Fractol) - 🏆 100  
