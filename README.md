@@ -42,10 +42,9 @@ Simulación del clásico **problema de los filósofos comensales**, gestionando 
 
 ---
 
-## 📌 **En progreso...**  
-📍 **[Minishell](https://github.com/claauugil/Minishell)** - 🔧 Implementando una shell minimalista en C.  
-
----
+## 🎯 MILESTONE 03  
+#### [📌 Minishell](https://github.com/Minishell-cgil-gmaccha/Minishell-gmaccha-cgil)  🏆 101 
+Shell Unix simplificada desarrollada en 42 Madrid. Implementa ejecución de comandos, redirecciones, pipes, built-ins, heredocs y manejo básico de señales, emulando el comportamiento de Bash en modo interactivo.
 
 ✨ **Contacto**   
-📧 [sofiagil2288@gmail.com](mailto:sofiagil2288@gmail.com)  
+📧 [sofiagil2288@gmail.com](mailto:sofiagil2288@gmail.com) 
