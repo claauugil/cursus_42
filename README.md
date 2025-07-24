@@ -40,11 +40,8 @@ Generador de fractales interactivos como Mandelbrot y Julia utilizando **MiniLib
 #### [📌 Philosophers](https://github.com/claauugil/philo) - 🏆 100  
 Simulación del clásico **problema de los filósofos comensales**, gestionando múltiples hilos con **mutexes** para evitar condiciones de carrera y **deadlocks** en un entorno de concurrencia.  
 
----
-
-## 🎯 MILESTONE 03  
 #### [📌 Minishell](https://github.com/Minishell-cgil-gmaccha/Minishell-gmaccha-cgil)  🏆 101 
 Shell Unix simplificada desarrollada en 42 Madrid. Implementa ejecución de comandos, redirecciones, pipes, built-ins, heredocs y manejo básico de señales, emulando el comportamiento de Bash en modo interactivo.
 
-✨ **Contacto**   
+**Contacto**   
 📧 [sofiagil2288@gmail.com](mailto:sofiagil2288@gmail.com) 
