@@ -59,6 +59,7 @@ Shell Unix simplificada desarrollada en 42 Madrid. Implementa ejecución de coma
 | 00 | 🧩 Módulo 00 - Fundamentos | Primer CPP: manejo de namespaces, clases, funciones miembro, iostream, listas de inicialización, static y const. Sin printf, malloc/free, using namespace ni STL (C++98). Incluye ejercicios como Megaphone y My Awesome PhoneBook. | [CPP](https://github.com/claauugil/CPP_Modules) |
 | 01 | 🧟 Módulo 01 - Memoria & Punteros | Segundo CPP: memoria dinámica, referencias y punteros a miembros. Incluye ejercicios con zombies, Harl y manipulación de punteros y referencias. | [CPP](https://github.com/claauugil/CPP_Modules) |
 | 02 | ⚡ Módulo 02 - Polimorfismo & Operadores | Tercer CPP: polimorfismo ad-hoc, sobrecarga de operadores y forma canónica ortodoxa. Incluye la clase Fixed y sobrecarga de operadores aritméticos y de comparación. | [CPP](https://github.com/claauugil/CPP_Modules) |
+| 03 | 💎 Módulo 03 - Herencia & Múltiples | Clase `ClapTrap` y sus derivados `ScavTrap`, `FragTrap` y `DiamondTrap`. Incluye manejo de atributos, métodos especiales (`guardGate()`, `highFivesGuys()`, `whoAmI()`), constructores/destructores y múltiples herencias en DiamondTrap. | [CPP](https://github.com/claauugil/CPP_Modules) |
 
 
 **Contacto**   
