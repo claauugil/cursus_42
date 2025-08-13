@@ -33,6 +33,13 @@ Recreación del mecanismo de **pipes** en Linux, permitiendo la comunicación en
 
 #### [📌 Fract-ol](https://github.com/claauugil/Fractol) - 🏆 100  
 Generador de fractales interactivos como Mandelbrot y Julia utilizando **MiniLibX**. Permite realizar **zoom** y navegación en tiempo real.  
+### 🎯 MILESTONE 04 - CPPs
+
+| CPP | Nombre | Breve descripción | Enlace |
+|-----|--------|-----------------|--------|
+| CPP 00 | Módulo 00 | Primer CPP: manejo de namespaces, clases, funciones miembro, iostream, listas de inicialización, static y const. Sin printf, malloc/free, using namespace ni STL (C++98). Incluye ejercicios como Megaphone y My Awesome PhoneBook. | [Ver CPP](#) |
+| CPP 01 | Módulo 01 | Segundo CPP: memoria dinámica, referencias y punteros a miembros. Incluye ejercicios con zombies, Harl, manipulación de punteros y referencias. | [Ver CPP](#) |
+| CPP 02 | Módulo 02 | Tercer CPP: polimorfismo ad-hoc, sobrecarga de operadores y forma canónica ortodoxa. Incluye la clase Fixed y sobrecarga de operadores aritméticos y de comparación. | [Ver CPP](#) |
 
 ---
 
@@ -42,6 +49,17 @@ Simulación del clásico **problema de los filósofos comensales**, gestionando 
 
 #### [📌 Minishell](https://github.com/Minishell-cgil-gmaccha/Minishell-gmaccha-cgil)  🏆 101 
 Shell Unix simplificada desarrollada en 42 Madrid. Implementa ejecución de comandos, redirecciones, pipes, built-ins, heredocs y manejo básico de señales, emulando el comportamiento de Bash en modo interactivo.
+
+---
+
+### 🎯 MILESTONE 04 - CPPs
+
+| CPP | Nombre | Descripción | Proyecto |
+|-----|--------|-----------------|--------|
+| 00 | 🧩 Módulo 00 - Fundamentos | Primer CPP: manejo de namespaces, clases, funciones miembro, iostream, listas de inicialización, static y const. Sin printf, malloc/free, using namespace ni STL (C++98). Incluye ejercicios como Megaphone y My Awesome PhoneBook. | [CPP](https://github.com/claauugil/CPP_Modules) |
+| 01 | 🧟 Módulo 01 - Memoria & Punteros | Segundo CPP: memoria dinámica, referencias y punteros a miembros. Incluye ejercicios con zombies, Harl y manipulación de punteros y referencias. | [CPP](https://github.com/claauugil/CPP_Modules) |
+| 02 | ⚡ Módulo 02 - Polimorfismo & Operadores | Tercer CPP: polimorfismo ad-hoc, sobrecarga de operadores y forma canónica ortodoxa. Incluye la clase Fixed y sobrecarga de operadores aritméticos y de comparación. | [CPP](https://github.com/claauugil/CPP_Modules) |
+
 
 **Contacto**   
 📧 [sofiagil2288@gmail.com](mailto:sofiagil2288@gmail.com) 
