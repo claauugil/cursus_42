@@ -33,6 +33,7 @@ Recreación del mecanismo de **pipes** en Linux, permitiendo la comunicación en
 
 #### [📌 Fract-ol](https://github.com/claauugil/Fractol) - 🏆 100  
 Generador de fractales interactivos como Mandelbrot y Julia utilizando **MiniLibX**. Permite realizar **zoom** y navegación en tiempo real.  
+
 ---
 
 ### 🎯 MILESTONE 03  
