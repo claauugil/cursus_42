@@ -54,6 +54,11 @@ Shell Unix simplificada desarrollada en 42 Madrid. Implementa ejecución de coma
 | 02 | ⚡ Módulo 02 - Polimorfismo & Operadores | Tercer CPP: polimorfismo ad-hoc, sobrecarga de operadores y forma canónica ortodoxa. Incluye la clase Fixed y sobrecarga de operadores aritméticos y de comparación. | [CPP](https://github.com/claauugil/CPP_Modules) |
 | 03 | 💎 Módulo 03 - Herencia & Múltiples | Clase `ClapTrap` y sus derivados `ScavTrap`, `FragTrap` y `DiamondTrap`. Incluye manejo de atributos, métodos especiales (`guardGate()`, `highFivesGuys()`, `whoAmI()`), constructores/destructores y múltiples herencias en DiamondTrap. | [CPP](https://github.com/claauugil/CPP_Modules) |
 | 04 | 🐶🐱 Módulo 04 - Polimorfismo & Abstractas | Subtipo de polimorfismo, clases abstractas e interfaces. Ejercicios con `Animal`, `Dog`, `Cat`, `WrongAnimal`, `Brain` y gestión de memoria dinámica con deep copies. Incluye conversión de `Animal` en clase abstracta. | [CPP](https://github.com/claauugil/CPP_Modules) |
+  
+#### [📌 NetPractice](https://github.com/claauugil/NetPractice) - 🏆 100  
+Proyecto de redes enfocado en el diseño y configuración de subredes, IPs, máscaras, routers y gateways. Consiste en resolver distintos niveles prácticos simulando entornos de red para comprender cómo se comunican los dispositivos en una infraestructura real.  
+
+---
 
 **Contacto**   
 📧 [sofiagil2288@gmail.com](mailto:sofiagil2288@gmail.com) 
