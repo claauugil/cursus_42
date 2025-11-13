@@ -16,7 +16,7 @@
 | 01 | ✅ | [Printf](https://github.com/claauugil/Printf), [Born2beroot](), [Get Next Line](https://github.com/claauugil/Get_next_line) |
 | 02 | ✅ | [Pipex](https://github.com/claauugil/Pipex), [Push Swap](https://github.com/claauugil/push_swap), [Fract-ol](https://github.com/claauugil/Fractol) |
 | 03 | ✅ | [Philosophers](https://github.com/claauugil/philo), [Minishell](https://github.com/Minishell-cgil-gmaccha/Minishell-gmaccha-cgil) |
-| 04 | ✅ | [CPP Modules 00–04](https://github.com/claauugil/CPP_Modules), [Cub3D](https://github.com/claauugil/Cub3D) |
+| 04 | ✅ | [CPP Modules 00–04](https://github.com/claauugil/CPP_Modules), [Cub3D](https://github.com/claauugil/Cub3D), [NetPractice](https://github.com/claauugil/Net-Practice) |
 | 05 | 🕓 | [CPP05](https://github.com/claauugil/CPP05) |
 
 ---
@@ -32,12 +32,9 @@
 🌀 **[Fract-ol](https://github.com/claauugil/Fractol)**  
 > Visualizador de fractales interactivo en C con MiniLibX. Soporta zoom y navegación fluida en tiempo real.  
 
-📡 **[NetPractice](https://github.com/claauugil/Net-Practice)**  
-> Configuración de subredes, IPs, máscaras y routing en entornos simulados.  
-
 ---
 
 ## 📫 Contacto  
 
 📧 [sofiagil2288@gmail.com](mailto:sofiagil2288@gmail.com)  
-🧭 [LinkedIn](#) *(añádelo si quieres más proyección)*  
+🧭 [LinkedIn](https://www.linkedin.com/in/claudia-gil-775475262/)
