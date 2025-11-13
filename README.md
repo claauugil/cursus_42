@@ -49,17 +49,25 @@ Shell Unix simplificada desarrollada en 42 Madrid. Implementa ejecución de coma
 
 | CPP | Nombre | Descripción | Proyecto |
 |-----|--------|-----------------|--------|
-| 00 | 🧩 Módulo 00 - Fundamentos | Primer CPP: manejo de namespaces, clases, funciones miembro, iostream, listas de inicialización, static y const. Sin printf, malloc/free, using namespace ni STL (C++98). Incluye ejercicios como Megaphone y My Awesome PhoneBook. | [CPP](https://github.com/claauugil/CPP_Modules) |
-| 01 | 🧟 Módulo 01 - Memoria & Punteros | Segundo CPP: memoria dinámica, referencias y punteros a miembros. Incluye ejercicios con zombies, Harl y manipulación de punteros y referencias. | [CPP](https://github.com/claauugil/CPP_Modules) |
-| 02 | ⚡ Módulo 02 - Polimorfismo & Operadores | Tercer CPP: polimorfismo ad-hoc, sobrecarga de operadores y forma canónica ortodoxa. Incluye la clase Fixed y sobrecarga de operadores aritméticos y de comparación. | [CPP](https://github.com/claauugil/CPP_Modules) |
-| 03 | 💎 Módulo 03 - Herencia & Múltiples | Clase `ClapTrap` y sus derivados `ScavTrap`, `FragTrap` y `DiamondTrap`. Incluye manejo de atributos, métodos especiales (`guardGate()`, `highFivesGuys()`, `whoAmI()`), constructores/destructores y múltiples herencias en DiamondTrap. | [CPP](https://github.com/claauugil/CPP_Modules) |
-| 04 | 🐶🐱 Módulo 04 - Polimorfismo & Abstractas | Subtipo de polimorfismo, clases abstractas e interfaces. Ejercicios con `Animal`, `Dog`, `Cat`, `WrongAnimal`, `Brain` y gestión de memoria dinámica con deep copies. Incluye conversión de `Animal` en clase abstracta. | [CPP](https://github.com/claauugil/CPP_Modules) |
+| 00 | 🧩 Módulo 00 - Fundamentos | Primer CPP: manejo de namespaces, clases, funciones miembro, iostream, listas de inicialización, static y const. Sin printf, malloc/free, using namespace ni STL (C++98). Incluye ejercicios como Megaphone y My Awesome PhoneBook. | [CPP00](https://github.com/claauugil/CPP_Modules) |
+| 01 | 🧟 Módulo 01 - Memoria & Punteros | Segundo CPP: memoria dinámica, referencias y punteros a miembros. Incluye ejercicios con zombies, Harl y manipulación de punteros y referencias. | [CPP01](https://github.com/claauugil/CPP_Modules) |
+| 02 | ⚡ Módulo 02 - Polimorfismo & Operadores | Tercer CPP: polimorfismo ad-hoc, sobrecarga de operadores y forma canónica ortodoxa. Incluye la clase Fixed y sobrecarga de operadores aritméticos y de comparación. | [CPP02](https://github.com/claauugil/CPP_Modules) |
+| 03 | 💎 Módulo 03 - Herencia & Múltiples | Clase `ClapTrap` y sus derivados `ScavTrap`, `FragTrap` y `DiamondTrap`. Incluye manejo de atributos, métodos especiales (`guardGate()`, `highFivesGuys()`, `whoAmI()`), constructores/destructores y múltiples herencias en DiamondTrap. | [CPP03](https://github.com/claauugil/CPP_Modules) |
+| 04 | 🐶🐱 Módulo 04 - Polimorfismo & Abstractas | Subtipo de polimorfismo, clases abstractas e interfaces. Ejercicios con `Animal`, `Dog`, `Cat`, `WrongAnimal`, `Brain` y gestión de memoria dinámica con deep copies. Incluye conversión de `Animal` en clase abstracta. | [CPP04](https://github.com/claauugil/CPP_Modules) |
   
 #### [📌 NetPractice](https://github.com/claauugil/Net-Practice) - 🏆 100  
 Proyecto de redes enfocado en el diseño y configuración de subredes, IPs, máscaras, routers y gateways. Consiste en resolver distintos niveles prácticos simulando entornos de red para comprender cómo se comunican los dispositivos en una infraestructura real.  
 
 #### [📌 Cub3D](https://github.com/claauugil/Cub3D) - 🏆 110  
 Proyecto gráfico inspirado en *Wolfenstein 3D*. Implementación de un motor de **raycasting** en C utilizando **MiniLibX**, con renderizado en 3D simulado, manejo de texturas, colisiones, minimapa y movimiento del jugador en tiempo real.
+
+---
+
+### 🎯 MILESTONE 05 - CPPs  
+
+| CPP | Nombre | Descripción | Proyecto |
+|-----|--------|--------------|-----------|
+| 05 | 🧠 Módulo 05 - Excepciones & Formularios | Quinto módulo de C++ centrado en el manejo de **excepciones**, **jerarquías de clases**, y **comunicación entre objetos**. Incluye ejercicios con `Bureaucrat` y `AForm`, aplicando control de errores mediante `try`/`catch`. | [CPP05](https://github.com/claauugil/CPP05) |
 
 ---
 
