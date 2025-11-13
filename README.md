@@ -1,112 +1,237 @@
-# 🚀 Common Core 42 Madrid  
+# 🚀 Common Core 42 Madrid
 
-![42 Badge](https://img.shields.io/badge/42Madrid-Student-black?logo=42)
-![Language C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
-![Language C++](https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+<div align="center">
 
----
+![42 Badge](https://img.shields.io/badge/42Madrid-Student-black?logo=42&style=for-the-badge)
+![Language C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white&style=for-the-badge)
+![Language C++](https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white&style=for-the-badge)
+![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black&style=for-the-badge)
 
-## 📊 Progreso  
+**Building foundational programming skills through hands-on projects**
 
-| Milestone | Estado | Proyectos Completados |
-|------------|---------|-----------------------|
-| 00 | ✅ | [Libft](https://github.com/claauugil/Libft) |
-| 01 | ✅ | [Printf](https://github.com/claauugil/Printf), [Born2beroot](), [Get Next Line](https://github.com/claauugil/Get_next_line) |
-| 02 | ✅ | [Pipex](https://github.com/claauugil/Pipex), [Push Swap](https://github.com/claauugil/push_swap), [Fract-ol](https://github.com/claauugil/Fractol) |
-| 03 | ✅ | [Philosophers](https://github.com/claauugil/philo), [Minishell](https://github.com/Minishell-cgil-gmaccha/Minishell-gmaccha-cgil) |
-| 04 | ✅ | [CPP Modules 00–04](https://github.com/claauugil/CPP_Modules), [Cub3D](https://github.com/claauugil/Cub3D), [NetPractice](https://github.com/claauugil/Net-Practice) |
-| 05 | 🕓 | [CPP05](https://github.com/claauugil/CPP05) |
+[Ver todos los proyectos](#proyectos) • [Habilidades adquiridas](#skills) • [Contacto](#contacto)
+
+</div>
 
 ---
 
-## 🎯 Milestones & Proyectos  
+## 🎯 Proyectos
 
-### Milestone 00
-**[Libft](https://github.com/claauugil/Libft)**   
-![Nota](https://img.shields.io/badge/Nota-100-brightgreen)  
-![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![Memory](https://img.shields.io/badge/Memoria-D9534F?logoColor=white)  
-**Descripción:** Biblioteca personalizada que replica funciones estándar de `<string.h>` y `<stdlib.h>`. Maneja strings, memoria, conversiones y utilidades esenciales.  
+### Milestone 00 — Fundamentos
+<details open>
+<summary><b>Click para ver más</b></summary>
 
----
+#### [Libft](https://github.com/claauugil/Libft) • Nota: 100/100
+> **Mi propia biblioteca en C** — Implementación personalizada de funciones esenciales de la biblioteca estándar
 
-### Milestone 01
-**[Printf](https://github.com/claauugil/Printf)**  
-![Nota](https://img.shields.io/badge/Nota-100-brightgreen)  
-![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![Memory](https://img.shields.io/badge/Memoria-D9534F?logoColor=white) ![Variadic](https://img.shields.io/badge/Funciones_Variádicas-6f42c1?logoColor=white)  
-**Descripción:** Reimplementación de `printf` con soporte de formatos básicos y avanzados, gestionando memoria dinámica y funciones variádicas.  
+**Qué construí:** Biblioteca base que recrea funciones de `<string.h>`, `<stdlib.h>` y utilidades para listas enlazadas y gestión de memoria.
 
-**[Born2beroot](#)**  
-![Nota](https://img.shields.io/badge/Nota-96-yellow)  
-![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black) ![Seguridad](https://img.shields.io/badge/Seguridad-007bff?logoColor=white)  
-**Descripción:** Configuración de servidor Linux seguro, gestión de usuarios, permisos y virtualización.  
+**Aprendizajes clave:** Gestión de memoria, manipulación de punteros, creación de Makefile, modularidad de código
 
-**[Get Next Line](https://github.com/claauugil/Get_next_line)**  
-![Nota](https://img.shields.io/badge/Nota-112-brightgreen)  
-![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![Memory](https://img.shields.io/badge/Memoria-D9534F?logoColor=white) ![Files](https://img.shields.io/badge/Archivos-ffc107?logoColor=white)  
-**Descripción:** Lectura de archivos línea por línea de manera eficiente, adaptable a cualquier tamaño de buffer.  
+**Tecnologías:** `C` • `Gestión de memoria` • `Librerías estáticas`
+
+</details>
 
 ---
 
-### Milestone 02
-**[Push Swap](https://github.com/claauugil/push_swap)**  
-![Nota](https://img.shields.io/badge/Nota-100-brightgreen)  
-![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![Algoritmos](https://img.shields.io/badge/Algoritmos-28a745?logoColor=white) ![Data_Structures](https://img.shields.io/badge/EstructurasDeDatos-6f42c1?logoColor=white)  
-**Descripción:** Ordenación de pilas con operaciones limitadas, optimizando movimientos mediante estrategias eficientes.  
+### Milestone 01 — Fundamentos del sistema
+<details>
+<summary><b>Click para ver más</b></summary>
 
-**[Pipex](https://github.com/claauugil/Pipex)**  
-![Nota](https://img.shields.io/badge/Nota-100-brightgreen)  
-![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black) ![Fork_Exec](https://img.shields.io/badge/Fork-dup2-ff69b4?logoColor=white)  
-**Descripción:** Recreación de pipes en Linux (`fork`, `exec`, `dup2`) para comunicación entre procesos, replicando `|` en la terminal.  
+#### [Printf](https://github.com/claauugil/Printf) • Nota: 100/100
+> **Función printf personalizada** — Reimplementación de una de las funciones más versátiles de C
 
-**[Fract-ol](https://github.com/claauugil/Fractol)**  
-![Nota](https://img.shields.io/badge/Nota-100-brightgreen)  
-![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![MiniLibX](https://img.shields.io/badge/MiniLibX-101010?logoColor=white) ![Matemáticas](https://img.shields.io/badge/Matemáticas-f0ad4e?logoColor=white)  
-**Descripción:** Generador de fractales interactivo (Mandelbrot y Julia), con zoom y navegación fluida en tiempo real.  
+**Qué construí:** Implementación completa de printf con soporte para varios formatos (d, i, u, x, X, s, c, p, %)
+
+**Aprendizajes clave:** Funciones variádicas, parsing de formatos, manejo de casos límite
+
+**Tecnologías:** `C` • `Funciones variádicas` • `Formateo de strings`
 
 ---
 
-### Milestone 03
-**[Philosophers](https://github.com/claauugil/philo)**  
-![Nota](https://img.shields.io/badge/Nota-100-brightgreen)  
-![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![Threads](https://img.shields.io/badge/Hilos-007bff?logoColor=white) ![Mutex](https://img.shields.io/badge/Mutex-dc3545?logoColor=white)  
-**Descripción:** Simulación del problema de los filósofos comensales, evitando condiciones de carrera y deadlocks en entornos concurrentes.  
+#### [Get Next Line](https://github.com/claauugil/Get_next_line) • Nota: 112/100 ⭐
+> **Lector eficiente de archivos** — Lee archivos línea por línea con buffer dinámico
 
-**[Minishell](https://github.com/Minishell-cgil-gmaccha/Minishell-gmaccha-cgil)**  
-![Nota](https://img.shields.io/badge/Nota-101-brightgreen)  
-![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black) ![Pipes](https://img.shields.io/badge/Pipes-6f42c1?logoColor=white) ![Redirections](https://img.shields.io/badge/Redirecciones-ffc107?logoColor=white)  
-**Descripción:** Shell simplificada que implementa ejecución de comandos, pipes, redirecciones, heredocs y built-ins, emulando Bash de manera interactiva.  
+**Qué construí:** Función que lee y devuelve una línea a la vez desde cualquier descriptor de archivo, soportando múltiples descriptores simultáneamente
+
+**Aprendizajes clave:** Variables estáticas, manejo de buffers, descriptores de archivo, funcionalidades extra
+
+**Tecnologías:** `C` • `I/O de archivos` • `Variables estáticas`
 
 ---
 
-### Milestone 04
-**[CPP Modules 00–04](https://github.com/claauugil/CPP_Modules)**  
-![Nota](https://img.shields.io/badge/Nota-100-brightgreen)  
-![C++](https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white) ![OOP](https://img.shields.io/badge/OOP-6f42c1?logoColor=white) ![Memory](https://img.shields.io/badge/Memoria-D9534F?logoColor=white)  
-**Descripción:** Ejercicios de C++ sobre fundamentos, memoria, polimorfismo, herencia, clases abstractas y gestión de memoria.  
+#### [Born2beroot](https://www.notion.so/readme-42-2aaeff522d9a80d7bec9c0b4e42deea5?pvs=21) • Nota: 96/100
+> **Administración de sistemas Linux** — Configuración de un servidor virtual seguro desde cero
 
-**[Cub3D](https://github.com/claauugil/Cub3D)**  
-![Nota](https://img.shields.io/badge/Nota-110-brightgreen)  
-![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![MiniLibX](https://img.shields.io/badge/MiniLibX-101010?logoColor=white) ![Raycasting](https://img.shields.io/badge/Raycasting-28a745?logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)  
-**Descripción:** Motor 3D inspirado en *Wolfenstein 3D* con raycasting, texturas, colisiones, minimapa y movimiento en tiempo real.  
+**Qué construí:** Servidor Debian seguro con políticas estrictas, gestión de usuarios y scripts de monitorización
 
-**[NetPractice](https://github.com/claauugil/Net-Practice)**  
-![Nota](https://img.shields.io/badge/Nota-100-brightgreen)  
-![Redes](https://img.shields.io/badge/Redes-007bff?logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)  
-**Descripción:** Diseño y simulación de subredes, IPs, routers y gateways, comprendiendo la comunicación entre dispositivos en entornos reales.  
+**Aprendizajes clave:** LVM, AppArmor, configuración SSH, políticas de sudo, cron jobs
+
+**Tecnologías:** `Linux` • `Bash` • `Administración de sistemas`
+
+</details>
 
 ---
 
-### Milestone 05
-**[CPP05](https://github.com/claauugil/CPP05)**  
-![Nota](https://img.shields.io/badge/Nota-100-brightgreen)  
-![C++](https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white) ![OOP](https://img.shields.io/badge/OOP-6f42c1?logoColor=white) ![Excepciones](https://img.shields.io/badge/Excepciones-dc3545?logoColor=white)  
-**Descripción:** Manejo de excepciones, jerarquía de clases y comunicación entre objetos. Ejercicios con `Bureaucrat` y `AForm`, aplicando `try`/`catch` y control de errores.  
+### Milestone 02 — Algoritmos y gráficos
+<details>
+<summary><b>Click para ver más</b></summary>
+
+#### [Push Swap](https://github.com/claauugil/push_swap) • Nota: 100/100
+> **Reto de algoritmos de ordenamiento** — Ordena una pila con operaciones limitadas
+
+**Qué construí:** Algoritmo eficiente de ordenamiento usando dos pilas y un conjunto restringido de operaciones
+
+**Aprendizajes clave:** Optimización de algoritmos, análisis de complejidad, estructuras de datos
+
+**Tecnologías:** `C` • `Algoritmos de ordenamiento` • `Optimización`
 
 ---
 
-## 📫 Contacto  
+#### [Pipex](https://github.com/claauugil/Pipex) • Nota: 100/100
+> **Simulador de pipes Unix** — Reproduce el comportamiento de pipes de la shell
 
-📧 [sofiagil2288@gmail.com](mailto:sofiagil2288@gmail.com)  
-🧭 [LinkedIn](https://www.linkedin.com/in/claudia-gil-775475262/)
+**Qué construí:** Programa que simula el operador de pipes, manejando ejecución de comandos y comunicación entre procesos
+
+**Aprendizajes clave:** Creación de procesos (`fork`), descriptores de archivo, `dup2`, `execve`, `waitpid`
+
+**Tecnologías:** `C` • `Sistemas Unix` • `Gestión de procesos`
+
+---
+
+#### [Fract-ol](https://github.com/claauugil/Fractol) • Nota: 100/100
+> **Visualizador interactivo de fractales** — Arte matemático en tiempo real
+
+**Qué construí:** Aplicación gráfica que renderiza fractales Mandelbrot y Julia con zoom, esquemas de color y navegación fluida
+
+**Aprendizajes clave:** Números complejos, renderizado gráfico, manejo de eventos, optimización
+
+**Tecnologías:** `C` • `MiniLibX` • `Matemáticas` • `Gráficos por computadora`
+
+</details>
+
+---
+
+### Milestone 03 — Concurrencia y Shell
+<details>
+<summary><b>Click para ver más</b></summary>
+
+#### [Philosophers](https://github.com/claauugil/philo) • Nota: 100/100
+> **Problema de los filósofos comensales** — Maestría en multihilos
+
+**Qué construí:** Simulación del clásico problema de sincronización, evitando deadlocks y condiciones de carrera
+
+**Aprendizajes clave:** Hilos (`pthread`), mutexes, semáforos, programación concurrente
+
+**Tecnologías:** `C` • `Multihilos` • `Sincronización`
+
+---
+
+#### [Minishell](https://github.com/Minishell-cgil-gmaccha/Minishell-gmaccha-cgil) • Nota: 101/100 ⭐
+> **Nuestra propia shell** — Intérprete funcional estilo Bash
+
+**Qué construí:** Intérprete de línea de comandos con pipes, redirecciones, heredocs, variables de entorno y comandos internos
+
+**Aprendizajes clave:** Parsing, análisis léxico, ejecución de procesos, manejo de señales, trabajo en equipo
+
+**Tecnologías:** `C` • `Programación de Shell` • `Sistemas Unix`
+
+</details>
+
+---
+
+### Milestone 04 — Programación orientada a objetos & Gráficos 3D
+<details>
+<summary><b>Click para ver más</b></summary>
+
+#### [CPP Modules 00–04](https://github.com/claauugil/CPP_Modules) • Nota: 100/100
+> **Fundamentos de C++** — Transición de C a programación orientada a objetos
+
+**Qué construí:** Ejercicios sobre clases, herencia, polimorfismo, sobrecarga de operadores y forma canónica ortodoxa
+
+**Aprendizajes clave:** Principios OOP, gestión de memoria en C++, diseño de clases
+
+**Tecnologías:** `C++` • `OOP` • `Polimorfismo`
+
+---
+
+#### [Cub3D](https://github.com/claauugil/Cub3D) • Nota: 110/100 ⭐
+> **Motor 3D** — Inspirado en Wolfenstein 3D con raycasting
+
+**Qué construí:** Juego en primera persona con paredes texturizadas, detección de colisiones y minimapa
+
+**Aprendizajes clave:** Algoritmo de raycasting, mapeo de texturas, bucle de juego, renderizado en tiempo real
+
+**Tecnologías:** `C` • `MiniLibX` • `Gráficos por computadora` • `Desarrollo de juegos`
+
+---
+
+#### [NetPractice](https://github.com/claauugil/Net-Practice) • Nota: 100/100
+> **Fundamentos de redes** — Comprensión de TCP/IP y subredes
+
+**Qué construí:** Ejercicios de configuración de red, direcciones IP, máscaras, routing y topología de red
+
+**Aprendizajes clave:** TCP/IP, subnetting, routing, troubleshooting de red
+
+**Tecnologías:** `Redes` • `TCP/IP` • `Administración de sistemas`
+
+</details>
+
+---
+
+### Milestone 05 — C++ avanzado
+<details>
+<summary><b>Click para ver más</b></summary>
+
+#### [CPP05](https://github.com/claauugil/CPP05) • Nota: 100/100
+> **Manejo de excepciones** — Gestión robusta de errores en C++
+
+**Qué construí:** Proyectos implementando excepciones, jerarquías de clases y try-catch con `Bureaucrat` y `AForm`
+
+**Aprendizajes clave:** Excepciones, RAII, patrones de diseño de clases
+
+**Tecnologías:** `C++` • `Manejo de excepciones` • `OOP`
+
+---
+
+#### 🕓 Próximos proyectos…
+
+</details>
+
+---
+
+## 🛠️ Skills
+<table>
+<tr>
+<td width="50%">
+
+### Habilidades técnicas
+- **Lenguajes:** C, C++, Bash
+- **Conceptos:** Gestión de memoria, Multihilos, OOP
+- **Sistemas:** Linux, Programación Unix, Redes
+- **Herramientas:** Git, Makefile, GDB, Valgrind
+
+</td>
+<td width="50%">
+
+### Habilidades blandas
+- Diseño y optimización de algoritmos
+- Resolución de problemas y debugging
+- Documentación de código
+- Revisión entre pares y colaboración
+- Gestión del tiempo
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📧 Contacto
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-sofiagil2288@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sofiagil2288@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Claudia_Gil-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/claudia-gil-775475262/)
+
+</div>
