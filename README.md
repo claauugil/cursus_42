@@ -58,6 +58,9 @@ Shell Unix simplificada desarrollada en 42 Madrid. Implementa ejecución de coma
 #### [📌 NetPractice](https://github.com/claauugil/Net-Practice) - 🏆 100  
 Proyecto de redes enfocado en el diseño y configuración de subredes, IPs, máscaras, routers y gateways. Consiste en resolver distintos niveles prácticos simulando entornos de red para comprender cómo se comunican los dispositivos en una infraestructura real.  
 
+#### [📌 Cub3D](https://github.com/claauugil/Cub3D) - 🏆 110  
+Proyecto gráfico inspirado en *Wolfenstein 3D*. Implementación de un motor de **raycasting** en C utilizando **MiniLibX**, con renderizado en 3D simulado, manejo de texturas, colisiones, minimapa y movimiento del jugador en tiempo real.
+
 ---
 
 **Contacto**   
