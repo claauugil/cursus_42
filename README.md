@@ -61,7 +61,7 @@
 
 ---
 
-#### [Born2beroot](https://www.notion.so/readme-42-2aaeff522d9a80d7bec9c0b4e42deea5?pvs=21) • Nota: 96/100
+#### Born2beroot • Nota: 96/100
 ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnu-bash&logoColor=white)
 ![SysAdmin](https://img.shields.io/badge/Administración_de_sistemas-FF6F61)
